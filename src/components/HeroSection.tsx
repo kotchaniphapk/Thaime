@@ -1,6 +1,6 @@
 'use client';
 
-import { Instagram, Facebook, BookOpen, MessageCircle, Languages, MapPin } from 'lucide-react';
+import { Instagram, Facebook, BookOpen, Languages, MapPin } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 
@@ -18,7 +18,7 @@ export function HeroSection() {
   };
 
   return (
-    <div className="min-h-screen bg-red-600 relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden" style={{ backgroundColor: '#db2800' }}>
       {/* Grid pattern background for red section */}
       <div 
         className="absolute top-0 left-0 w-[50%] h-full"
@@ -33,12 +33,13 @@ export function HeroSection() {
       
       {/* Yellow curved section - circle from bottom-right corner */}
       <div 
-        className="absolute bottom-0 right-0 bg-gradient-to-br from-yellow-400 to-yellow-500"
+        className="absolute bottom-0 right-0"
         style={{
           width: '140vh',
           height: '140vh',
           borderRadius: '50%',
-          transform: 'translate(50%, 50%)'
+          transform: 'translate(50%, 50%)',
+          background: 'linear-gradient(to bottom right, #fcb10f, #fcb10f)'
         }}
       />
       
@@ -65,8 +66,8 @@ export function HeroSection() {
           onClick={toggleLanguage}
           className="absolute top-6 right-6 z-20 flex items-center gap-2 px-4 py-2 bg-white/90 hover:bg-white rounded-full shadow-lg transition-all duration-300 backdrop-blur-sm"
         >
-          <Languages className="w-5 h-5 text-red-600" />
-          <span className="uppercase tracking-wide text-red-600">
+          <Languages className="w-5 h-5" style={{ color: '#db2800' }} />
+          <span className="uppercase tracking-wide" style={{ color: '#db2800' }}>
             {i18n.language === 'th' ? 'TH' : 'EN'}
           </span>
         </button>
@@ -98,7 +99,14 @@ export function HeroSection() {
               {/* Instagram Button */}
               <a
                 href="#"
-                className="flex items-center gap-3 px-6 py-4 rounded-full border-2 border-white text-white hover:bg-white hover:text-red-600 transition-all duration-300 group"
+                className="flex items-center gap-3 px-6 py-4 rounded-full border-2 border-white text-white hover:bg-white transition-all duration-300 group"
+                style={{ '--hover-text-color': '#db2800' } as React.CSSProperties}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = '#db2800';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = 'white';
+                }}
               >
                 <Instagram className="w-6 h-6" />
                 <span className="uppercase tracking-wide">{t('burgerHero.instagram')}</span>
@@ -107,7 +115,13 @@ export function HeroSection() {
               {/* Book Table Button */}
               <a
                 href="#"
-                className="flex items-center gap-3 px-6 py-4 rounded-full border-2 border-white text-white hover:bg-white hover:text-red-600 transition-all duration-300 group"
+                className="flex items-center gap-3 px-6 py-4 rounded-full border-2 border-white text-white hover:bg-white transition-all duration-300 group"
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = '#db2800';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = 'white';
+                }}
               >
                 <BookOpen className="w-6 h-6" />
                 <span className="uppercase tracking-wide">{t('burgerHero.bookTable')}</span>
@@ -116,7 +130,13 @@ export function HeroSection() {
               {/* Facebook Button */}
               <a
                 href="#"
-                className="flex items-center gap-3 px-6 py-4 rounded-full border-2 border-white text-white hover:bg-white hover:text-red-600 transition-all duration-300 group"
+                className="flex items-center gap-3 px-6 py-4 rounded-full border-2 border-white text-white hover:bg-white transition-all duration-300 group"
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = '#db2800';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = 'white';
+                }}
               >
                 <Facebook className="w-6 h-6" />
                 <span className="uppercase tracking-wide">{t('burgerHero.facebook')}</span>
@@ -125,7 +145,13 @@ export function HeroSection() {
               {/* Line Official Button */}
               <a
                 href="#"
-                className="flex items-center gap-3 px-6 py-4 rounded-full border-2 border-white text-white hover:bg-white hover:text-red-600 transition-all duration-300 group"
+                className="flex items-center gap-3 px-6 py-4 rounded-full border-2 border-white text-white hover:bg-white transition-all duration-300 group"
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = '#db2800';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = 'white';
+                }}
               >
                 <MapPin className="w-6 h-6" />
                 <span className="uppercase tracking-wide">{t('burgerHero.lineOfficial')}</span>
