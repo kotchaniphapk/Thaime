@@ -1,188 +1,148 @@
 'use client';
-import { ArrowRight, Play, Star } from 'lucide-react';
-import { Button } from './ui/button';
 
-import { motion } from 'motion/react';
-import Image from 'next/image';
+import { Instagram, Facebook, BookOpen, MessageCircle, Languages, MapPin } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import Image from 'next/image';
 
-interface HeroSectionProps {
-  onPricingClick: () => void;
-  onExamplesClick: () => void;
-}
 
-export function HeroSection({ onPricingClick, onExamplesClick }: HeroSectionProps) {
-  const { t } = useTranslation();
-  const heroImage = '/heroimage.svg';
+export function HeroSection() {
+  const { t, i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'th' ? 'en' : 'th';
+    i18n.changeLanguage(newLang);
+    // Update HTML lang attribute
+    if (typeof document !== 'undefined') {
+      document.documentElement.lang = newLang;
+    }
+  };
+
   return (
-    <section className="relative overflow-hidden bg-white min-h-screen flex items-center py-20 px-4">
-      {/* Subtle Grid Background */}
-      <div className="absolute inset-0 opacity-[0.015]" style={{
-        backgroundImage: 'linear-gradient(#11181c 1px, transparent 1px), linear-gradient(90deg, #11181c 1px, transparent 1px)',
-        backgroundSize: '60px 60px'
-      }}></div>
-
-      {/* Gradient Orbs */}
-      <motion.div 
-        className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#ed6526] rounded-full blur-[200px] opacity-[0.08]"
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.08, 0.12, 0.08],
+    <div className="min-h-screen bg-red-600 relative overflow-hidden">
+      {/* Grid pattern background for red section */}
+      <div 
+        className="absolute top-0 left-0 w-[50%] h-full"
+        style={{
+          backgroundImage: `
+            linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '60px 60px'
         }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      ></motion.div>
+      />
       
-      <motion.div 
-        className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#ed6526] rounded-full blur-[200px] opacity-[0.06]"
-        animate={{
-          scale: [1.2, 1, 1.2],
-          opacity: [0.06, 0.1, 0.06],
+      {/* Yellow curved section - circle from bottom-right corner */}
+      <div 
+        className="absolute bottom-0 right-0 bg-gradient-to-br from-yellow-400 to-yellow-500"
+        style={{
+          width: '140vh',
+          height: '140vh',
+          borderRadius: '50%',
+          transform: 'translate(50%, 50%)'
         }}
-        transition={{
-          duration: 12,
-          repeat: Infinity,
-          ease: "easeInOut"
+      />
+      
+      {/* Grid pattern background for yellow section */}
+      <div 
+        className="absolute bottom-0 right-0"
+        style={{
+          width: '140vh',
+          height: '140vh',
+          borderRadius: '50%',
+          transform: 'translate(50%, 50%)',
+          backgroundImage: `
+            linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 1px, transparent 1px)
+          `,
+          backgroundSize: '60px 60px'
         }}
-      ></motion.div>
+      />
+      
+      {/* Main Content */}
+      <div className="relative z-10 min-h-screen flex flex-col">
+        {/* Language Toggle Button */}
+        <button
+          onClick={toggleLanguage}
+          className="absolute top-6 right-6 z-20 flex items-center gap-2 px-4 py-2 bg-white/90 hover:bg-white rounded-full shadow-lg transition-all duration-300 backdrop-blur-sm"
+        >
+          <Languages className="w-5 h-5 text-red-600" />
+          <span className="uppercase tracking-wide text-red-600">
+            {i18n.language === 'th' ? 'TH' : 'EN'}
+          </span>
+        </button>
 
-      <div className="max-w-7xl mx-auto relative z-10 w-full">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Content */}
-          <motion.div 
-            className="text-center lg:text-left space-y-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            {/* Badge */}
-            <motion.div 
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#f8f6f3] border border-[#ed6526]/20"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2 }}
-            >
-              <Star className="h-4 w-4 text-[#ed6526] fill-[#ed6526]" />
-              <span className="text-md text-[#11181c]">
-                {t('hero.badge')}
-              </span>
-            </motion.div>
-            
-            {/* Headline */}
-            <div className="space-y-4">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl tracking-tight text-[#11181c]">
-                {t('hero.headline')}
+        {/* Header with Logo */}
+        <div className="flex justify-center pt-6 pb-8">
+          <div className="text-center">
+            <Image width={100} height={100} src="/logoburger.svg" alt="Crazy Burger" className="w-full max-w-full" />
+            {/* <h2 className="text-white tracking-wider">{t('burgerHero.bioLink')}</h2> */}
+          </div>
+        </div>
+
+        {/* Content Grid */}
+        <div className="flex-1 px-6 md:px-12 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-7xl mx-auto w-full pb-8">
+          {/* Left Section - Text and Buttons */}
+          <div className="space-y-6">
+            <div className="space-y-2">
+              <h1 className="text-white text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight" style={{ fontWeight: 900, lineHeight: 1.1 }}>
+                {t('burgerHero.title1')}<br />{t('burgerHero.title2')}
               </h1>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl tracking-tight text-[#ed6526]">
-                {t('hero.subheadline')}
-              </h2>
+              <p className="text-white text-lg md:text-xl tracking-wide">
+                {t('burgerHero.subtitle1')}<br />
+                {t('burgerHero.subtitle2')}
+              </p>
             </div>
-            
-            {/* Subtext */}
-            <p className="text-lg md:text-xl text-[#11181c]/70 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              {t('hero.subtext')}
-            </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button
-                size="lg"
-                onClick={onPricingClick}
-                className="bg-[#ed6526] hover:bg-[#ed6526]/90 text-white shadow-xl shadow-[#ed6526]/30 hover:shadow-2xl hover:shadow-[#ed6526]/40 transition-all duration-300 group px-8 py-6 text-lg"
+            {/* Social Buttons Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 max-w-2xl">
+              {/* Instagram Button */}
+              <a
+                href="#"
+                className="flex items-center gap-3 px-6 py-4 rounded-full border-2 border-white text-white hover:bg-white hover:text-red-600 transition-all duration-300 group"
               >
-                {t('hero.ctaPrimary')}
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                onClick={onExamplesClick}
-                className="border-2 border-[#11181c] text-[#11181c] hover:bg-[#11181c] hover:text-white transition-all duration-300 px-8 py-6 text-lg group"
+                <Instagram className="w-6 h-6" />
+                <span className="uppercase tracking-wide">{t('burgerHero.instagram')}</span>
+              </a>
+
+              {/* Book Table Button */}
+              <a
+                href="#"
+                className="flex items-center gap-3 px-6 py-4 rounded-full border-2 border-white text-white hover:bg-white hover:text-red-600 transition-all duration-300 group"
               >
-                <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-                {t('hero.ctaSecondary')}
-              </Button>
+                <BookOpen className="w-6 h-6" />
+                <span className="uppercase tracking-wide">{t('burgerHero.bookTable')}</span>
+              </a>
+
+              {/* Facebook Button */}
+              <a
+                href="#"
+                className="flex items-center gap-3 px-6 py-4 rounded-full border-2 border-white text-white hover:bg-white hover:text-red-600 transition-all duration-300 group"
+              >
+                <Facebook className="w-6 h-6" />
+                <span className="uppercase tracking-wide">{t('burgerHero.facebook')}</span>
+              </a>
+
+              {/* Line Official Button */}
+              <a
+                href="#"
+                className="flex items-center gap-3 px-6 py-4 rounded-full border-2 border-white text-white hover:bg-white hover:text-red-600 transition-all duration-300 group"
+              >
+                <MapPin className="w-6 h-6" />
+                <span className="uppercase tracking-wide">{t('burgerHero.lineOfficial')}</span>
+              </a>
             </div>
+          </div>
 
-            {/* Trust Badge */}
-            {/* <div className="pt-8">
-              <p className="text-sm text-[#11181c]/60 mb-4">{t('hero.trustedBy')}</p>
-              <div className="flex flex-wrap gap-4 justify-center lg:justify-start items-center">
-                {['🛒', '🎬', '🎵', '🍔', '🏪'].map((emoji, i) => (
-                  <div key={i} className="w-12 h-12 rounded-xl bg-[#f8f6f3] border border-[#11181c]/10 flex items-center justify-center text-2xl hover:bg-[#ed6526]/5 hover:border-[#ed6526]/30 transition-colors">
-                    {emoji}
-                  </div>
-                ))}
-              </div>
-            </div> */}
-          </motion.div>
-
-          {/* Right - Large Mockup */}
-          <motion.div 
-            className="relative"
-            initial={{ opacity: 0, scale: 0.9, y: 40 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-            <div className="relative">
-              {/* Main Mockup */}
-              <div className="relative z-10">
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-[#ed6526]/50 rounded-3xl blur-3xl group-hover:blur-[100px] transition-all duration-700 opacity-20"></div>
-                  <div className="relative">
-                    <Image
-                      src={heroImage}
-                      alt="Website Dashboard"
-                      className="w-full h-auto rounded-2xl"
-                      width={1000}  
-                      height={1000}
-                      quality={100}
-                      priority
-                      unoptimized
-                    />
-
-                    {/* Floating Stats - Overlay on Image */}
-                    <motion.div
-                      className="absolute left-2 top-1/4 bg-white rounded-2xl px-3 py-2.5 shadow-xl border border-[#11181c]/10 z-20"
-                      animate={{ 
-                        y: [0, -10, 0],
-                      }}
-                      transition={{
-                        duration: 4,
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                      }}
-                    >
-                      <div className="text-2xl mb-0.5">📈</div>
-                      <div className="text-sm font-medium text-[#11181c]">+45%</div>
-                      <div className="text-xs text-[#11181c]/60 whitespace-nowrap">ลูกค้าเพิ่มขึ้น</div>
-                    </motion.div>
-
-                    <motion.div
-                      className="absolute -right-1.5 md:-right-4 bottom-1/8 bg-[#ed6526] rounded-2xl px-3 py-2.5 shadow-xl border border-[#ed6526]/20  z-20"
-                      animate={{ 
-                        y: [0, 10, 0],
-                      }}
-                      transition={{
-                        duration: 5,
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                      }}
-                    >
-                      <div className="text-2xl mb-0.5">⚡</div>
-                      <div className="text-sm font-medium text-white">1-2 วัน</div>
-                      <div className="text-xs text-white/80 whitespace-nowrap">พร้อมใช้งาน</div>
-                    </motion.div>
-                  </div>
-                </div>
-              </div>
+          {/* Right Section - Burger Image */}
+          <div className="relative lg:pl-12 flex items-center justify-center lg:justify-end">
+            <div className="relative max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-7xl">
+              <Image  width={512}
+                height={512} src="/burger2.svg" alt="Crazy Burger" className="w-full max-w-full" />
             </div>
-          </motion.div>
+          </div>
+          
         </div>
       </div>
-    </section>
+    </div>
   );
 }
