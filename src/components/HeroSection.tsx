@@ -18,9 +18,9 @@ export function HeroSection() {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden" style={{ backgroundColor: '#db2800' }}>
+    <div className="min-h-screen relative overflow-hidden" style={{ backgroundColor: '#fff0dc' }}>
       {/* Grid pattern background for red section */}
-      <div 
+      {/* <div 
         className="absolute top-0 left-0 w-[50%] h-full"
         style={{
           backgroundImage: `
@@ -29,22 +29,20 @@ export function HeroSection() {
           `,
           backgroundSize: '60px 60px'
         }}
-      />
+      /> */}
       
       {/* Yellow curved section - circle from bottom-right corner */}
       <div 
-        className="absolute bottom-0 right-0"
+        className="absolute bottom-0 right-0 md:w-[160vh] md:h-[140vh] w-[100vh] h-[100vh]"
         style={{
-          width: '140vh',
-          height: '140vh',
           borderRadius: '50%',
           transform: 'translate(50%, 50%)',
-          background: 'linear-gradient(to bottom right, #fcb10f, #fcb10f)'
+          background: 'linear-gradient(to bottom right, #ff8000, #ff8000)'
         }}
       />
       
       {/* Grid pattern background for yellow section */}
-      <div 
+      {/* <div 
         className="absolute bottom-0 right-0"
         style={{
           width: '140vh',
@@ -57,26 +55,30 @@ export function HeroSection() {
           `,
           backgroundSize: '60px 60px'
         }}
-      />
+      /> */}
       
       {/* Main Content */}
       <div className="relative z-10 min-h-screen flex flex-col">
         {/* Language Toggle Button */}
         <button
           onClick={toggleLanguage}
-          className="absolute top-6 right-6 z-20 flex items-center gap-2 px-4 py-2 bg-white/90 hover:bg-white rounded-full shadow-lg transition-all duration-300 backdrop-blur-sm"
+          className={`absolute top-6 right-6 z-20 flex items-center gap-2 px-4 py-2 rounded-full shadow-lg transition-all duration-300 backdrop-blur-sm ${
+            i18n.language === 'th' 
+              ? 'bg-[#ff8000] text-white hover:bg-[#ff8000]' 
+              : 'bg-white/90 text-[#2c1100] hover:bg-white'
+          }`}
         >
-          <Languages className="w-5 h-5" style={{ color: '#db2800' }} />
-          <span className="uppercase tracking-wide" style={{ color: '#db2800' }}>
-            {i18n.language === 'th' ? 'TH' : 'EN'}
+          <Languages className="w-5 h-5" />
+          <span className="uppercase tracking-wide">
+            {i18n.language === 'th' ? 'ไทย' : 'EN'}
           </span>
         </button>
 
         {/* Header with Logo */}
-        <div className="flex justify-center pt-6 pb-8">
+        <div className="flex justify-center pt-6 pb-8 items-center">
           <div className="text-center">
-            <Image width={100} height={100} src="/logoburger.svg" alt="Crazy Burger" className="w-full max-w-full" />
-            {/* <h2 className="text-white tracking-wider">{t('burgerHero.bioLink')}</h2> */}
+            <Image width={80} height={80} src="/logoburger4.svg" alt="Crazy Burger" className=" max-w-xl" />
+            <h2 className="text-[#2c1100]  text-xl font-semibold text-center  ">{t('burgerHero.bioLink')}</h2>
           </div>
         </div>
 
@@ -85,10 +87,10 @@ export function HeroSection() {
           {/* Left Section - Text and Buttons */}
           <div className="space-y-6">
             <div className="space-y-2">
-              <h1 className="text-white text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight" style={{ fontWeight: 900, lineHeight: 1.1 }}>
+              <h1 className="text-[#2c1100] text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight" style={{ fontWeight: 600, lineHeight: 1.1 }}>
                 {t('burgerHero.title1')}<br />{t('burgerHero.title2')}
               </h1>
-              <p className="text-white text-lg md:text-xl tracking-wide">
+              <p className="text-[#2c1100] text-lg md:text-xl tracking-wide">
                 {t('burgerHero.subtitle1')}<br />
                 {t('burgerHero.subtitle2')}
               </p>
@@ -99,71 +101,46 @@ export function HeroSection() {
               {/* Instagram Button */}
               <a
                 href="#"
-                className="flex items-center gap-3 px-6 py-4 rounded-full border-2 border-white text-white hover:bg-white transition-all duration-300 group"
-                style={{ '--hover-text-color': '#db2800' } as React.CSSProperties}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.color = '#db2800';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.color = 'white';
-                }}
+                className="flex items-center gap-3 px-6 py-6 rounded-full bg-white text-[#2c1100] hover:bg-[#ff8000] hover:text-white active:bg-[#ff8000] active:text-white transition-all duration-300 group touch-manipulation"
               >
-                <Instagram className="w-6 h-6" />
-                <span className="uppercase tracking-wide">{t('burgerHero.instagram')}</span>
+                <Instagram className="w-6 h-6 text-[#ff8000] group-hover:text-white group-active:text-white transition-colors" />
+                <span className="uppercase tracking-wide text-lg">{t('burgerHero.instagram')}</span>
               </a>
 
               {/* Book Table Button */}
               <a
                 href="#"
-                className="flex items-center gap-3 px-6 py-4 rounded-full border-2 border-white text-white hover:bg-white transition-all duration-300 group"
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.color = '#db2800';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.color = 'white';
-                }}
+                className="flex items-center gap-3 px-6 py-6 rounded-full bg-white text-[#2c1100] hover:bg-[#ff8000] hover:text-white active:bg-[#ff8000] active:text-white transition-all duration-300 group touch-manipulation"
               >
-                <BookOpen className="w-6 h-6" />
-                <span className="uppercase tracking-wide">{t('burgerHero.bookTable')}</span>
+                <BookOpen className="w-6 h-6 text-[#ff8000] group-hover:text-white group-active:text-white transition-colors" />
+                <span className="uppercase tracking-wide text-lg">{t('burgerHero.bookTable')}</span>
               </a>
 
               {/* Facebook Button */}
               <a
                 href="#"
-                className="flex items-center gap-3 px-6 py-4 rounded-full border-2 border-white text-white hover:bg-white transition-all duration-300 group"
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.color = '#db2800';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.color = 'white';
-                }}
+                className="flex items-center gap-3 px-6 py-6 rounded-full bg-white text-[#2c1100] hover:bg-[#ff8000] hover:text-white active:bg-[#ff8000] active:text-white transition-all duration-300 group touch-manipulation"
               >
-                <Facebook className="w-6 h-6" />
-                <span className="uppercase tracking-wide">{t('burgerHero.facebook')}</span>
+                <Facebook className="w-6 h-6 text-[#ff8000] group-hover:text-white group-active:text-white transition-colors" />
+                <span className="uppercase tracking-wide text-lg">{t('burgerHero.facebook')}</span>
               </a>
 
               {/* Line Official Button */}
               <a
                 href="#"
-                className="flex items-center gap-3 px-6 py-4 rounded-full border-2 border-white text-white hover:bg-white transition-all duration-300 group"
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.color = '#db2800';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.color = 'white';
-                }}
+                className="flex items-center gap-3 px-6 py-6 rounded-full bg-white text-[#2c1100] hover:bg-[#ff8000] hover:text-white active:bg-[#ff8000] active:text-white transition-all duration-300 group touch-manipulation"
               >
-                <MapPin className="w-6 h-6" />
-                <span className="uppercase tracking-wide">{t('burgerHero.lineOfficial')}</span>
+                <MapPin className="w-6 h-6 text-[#ff8000] group-hover:text-white group-active:text-white transition-colors" />
+                <span className="uppercase tracking-wide text-lg">{t('burgerHero.lineOfficial')}</span>
               </a>
             </div>
           </div>
 
           {/* Right Section - Burger Image */}
-          <div className="relative lg:pl-12 flex items-center justify-center lg:justify-end">
+          <div className="relative lg:pl-12 flex items-center justify-center lg:justify-center">
             <div className="relative max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-7xl">
-              <Image  width={512}
-                height={512} src="/burger2.svg" alt="Crazy Burger" className="w-full max-w-full" />
+              <Image  width={800}
+                height={800} src="/burgerhero2.svg" alt="Crazy Burger" className="w-full max-w-full" />
             </div>
           </div>
           
