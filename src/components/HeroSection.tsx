@@ -1,24 +1,16 @@
 'use client';
 
-import { Instagram, Facebook, BookOpen, Languages, MapPin } from 'lucide-react';
+import {Facebook, BookOpen, Languages, MapPin, Menu } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
+import { LanguageToggle } from './LanguageToggle';
 
 
 export function HeroSection() {
   const { t, i18n } = useTranslation();
 
-  const toggleLanguage = () => {
-    const newLang = i18n.language === 'th' ? 'en' : 'th';
-    i18n.changeLanguage(newLang);
-    // Update HTML lang attribute
-    if (typeof document !== 'undefined') {
-      document.documentElement.lang = newLang;
-    }
-  };
-
   return (
-    <div className="min-h-screen relative overflow-hidden" style={{ backgroundColor: '#fff0dc' }}>
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-amber-50 to-amber-100">
       {/* Grid pattern background for red section */}
       {/* <div 
         className="absolute top-0 left-0 w-[50%] h-full"
@@ -60,23 +52,11 @@ export function HeroSection() {
       {/* Main Content */}
       <div className="relative z-10 min-h-screen flex flex-col">
         {/* Language Toggle Button */}
-        <button
-          onClick={toggleLanguage}
-          className={`absolute top-6 right-6 z-20 flex items-center gap-2 px-4 py-2 rounded-full shadow-lg transition-all duration-300 backdrop-blur-sm ${
-            i18n.language === 'th' 
-              ? 'bg-[#ff8000] text-white hover:bg-[#ff8000]' 
-              : 'bg-white/90 text-[#2c1100] hover:bg-white'
-          }`}
-        >
-          <Languages className="w-5 h-5" />
-          <span className="uppercase tracking-wide">
-            {i18n.language === 'th' ? 'ไทย' : 'EN'}
-          </span>
-        </button>
+        <LanguageToggle />
 
         {/* Header with Logo */}
         <div className="flex justify-center pt-6 pb-8 items-center">
-          <div className="text-center">
+          <div className="text-center flex flex-col items-center">
             <Image width={80} height={80} src="/logoburger4.svg" alt="Crazy Burger" className=" max-w-xl" />
             <h2 className="text-[#2c1100]  text-xl font-semibold text-center  ">{t('burgerHero.bioLink')}</h2>
           </div>
@@ -98,40 +78,40 @@ export function HeroSection() {
 
             {/* Social Buttons Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 max-w-2xl">
-              {/* Instagram Button */}
+              {/* Menu Button */}
               <a
-                href="#"
-                className="flex items-center gap-3 px-6 py-6 rounded-full bg-white text-[#2c1100] hover:bg-[#ff8000] hover:text-white active:bg-[#ff8000] active:text-white transition-all duration-300 group touch-manipulation"
+                href="/menu"
+                className="flex items-center gap-3 px-6 py-4 rounded-full bg-white text-[#2c1100] hover:bg-[#ff8000] hover:text-white active:bg-[#ff8000] active:text-white transition-all duration-300 group touch-manipulation"
               >
-                <Instagram className="w-6 h-6 text-[#ff8000] group-hover:text-white group-active:text-white transition-colors" />
-                <span className="uppercase tracking-wide text-lg">{t('burgerHero.instagram')}</span>
+                <Menu className="w-6 h-6 text-[#ff8000] group-hover:text-white group-active:text-white transition-colors" />
+                <span className="uppercase tracking-wide text-lg font-semibold">{t('burgerHero.instagram')}</span>
               </a>
 
               {/* Book Table Button */}
               <a
                 href="#"
-                className="flex items-center gap-3 px-6 py-6 rounded-full bg-white text-[#2c1100] hover:bg-[#ff8000] hover:text-white active:bg-[#ff8000] active:text-white transition-all duration-300 group touch-manipulation"
+                className="flex items-center gap-3 px-6 py-4 rounded-full bg-white text-[#2c1100] hover:bg-[#ff8000] hover:text-white active:bg-[#ff8000] active:text-white transition-all duration-300 group touch-manipulation"
               >
                 <BookOpen className="w-6 h-6 text-[#ff8000] group-hover:text-white group-active:text-white transition-colors" />
-                <span className="uppercase tracking-wide text-lg">{t('burgerHero.bookTable')}</span>
+                <span className="uppercase tracking-wide text-lg font-semibold">{t('burgerHero.bookTable')}</span>
               </a>
 
               {/* Facebook Button */}
               <a
                 href="#"
-                className="flex items-center gap-3 px-6 py-6 rounded-full bg-white text-[#2c1100] hover:bg-[#ff8000] hover:text-white active:bg-[#ff8000] active:text-white transition-all duration-300 group touch-manipulation"
+                className="flex items-center gap-3 px-6 py-4 rounded-full bg-white text-[#2c1100] hover:bg-[#ff8000] hover:text-white active:bg-[#ff8000] active:text-white transition-all duration-300 group touch-manipulation"
               >
                 <Facebook className="w-6 h-6 text-[#ff8000] group-hover:text-white group-active:text-white transition-colors" />
-                <span className="uppercase tracking-wide text-lg">{t('burgerHero.facebook')}</span>
+                <span className="uppercase tracking-wide text-lg font-semibold">{t('burgerHero.facebook')}</span>
               </a>
 
               {/* Line Official Button */}
               <a
                 href="#"
-                className="flex items-center gap-3 px-6 py-6 rounded-full bg-white text-[#2c1100] hover:bg-[#ff8000] hover:text-white active:bg-[#ff8000] active:text-white transition-all duration-300 group touch-manipulation"
+                className="flex items-center gap-3 px-6 py-4 rounded-full bg-white text-[#2c1100] hover:bg-[#ff8000] hover:text-white active:bg-[#ff8000] active:text-white transition-all duration-300 group touch-manipulation"
               >
                 <MapPin className="w-6 h-6 text-[#ff8000] group-hover:text-white group-active:text-white transition-colors" />
-                <span className="uppercase tracking-wide text-lg">{t('burgerHero.lineOfficial')}</span>
+                <span className="uppercase tracking-wide text-lg font-semibold">{t('burgerHero.lineOfficial')}</span>
               </a>
             </div>
           </div>
