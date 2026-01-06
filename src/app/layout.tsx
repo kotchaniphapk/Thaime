@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Kanit } from "next/font/google";
+import { Thasadith } from "next/font/google";
 import "./globals.css";
 import { I18nProvider } from "@/components/I18nProvider";
 
-const kanit = Kanit({
-  variable: "--font-kanit",
+const thasadith = Thasadith({
+  variable: "--font-thasadith",
   subsets: ["latin", "thai"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Crazy Burger",
-  description: "Crazy Burger",
+  title: "Somtum",
+  description: "Somtum",
 };
 
 export default function RootLayout({
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="th">
       <body
-        className={`${kanit.variable} font-sans antialiased`}
+        className={`${thasadith.variable} font-sans antialiased`}
       >
         <I18nProvider>
           {children}

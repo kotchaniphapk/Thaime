@@ -1,78 +1,72 @@
-'use client';
+"use client";
 
-import {Facebook, BookOpen, Languages, MapPin, Menu } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
-import Image from 'next/image';
-import { LanguageToggle } from './LanguageToggle';
-
+import { Facebook, BookOpen, MapPin, Menu } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import Image from "next/image";
+import { LanguageToggle } from "./LanguageToggle";
 
 export function HeroSection() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-amber-50 to-amber-100">
-      {/* Grid pattern background for red section */}
-      {/* <div 
-        className="absolute top-0 left-0 w-[50%] h-full"
+    <div className="min-h-screen relative overflow-hidden bg-[#ce3033]">
+      {/* Radiating stripes background pattern */}
+      <div
+        className="absolute inset-0 opacity-30"
         style={{
-          backgroundImage: `
-            linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px)
+          background: `
+            repeating-conic-gradient(
+              from 0deg at 50% 100%,
+              #000000 0deg 2deg,
+              #1a0000 6deg 12deg
+            )
           `,
-          backgroundSize: '60px 60px'
-        }}
-      /> */}
-      
-      {/* Yellow curved section - circle from bottom-right corner */}
-      <div 
-        className="absolute bottom-0 right-0 md:w-[160vh] md:h-[140vh] w-[100vh] h-[100vh]"
-        style={{
-          borderRadius: '50%',
-          transform: 'translate(50%, 50%)',
-          background: 'linear-gradient(to bottom right, #ff8000, #ff8000)'
+          backgroundSize: "100% 100%",
         }}
       />
-      
-      {/* Grid pattern background for yellow section */}
-      {/* <div 
-        className="absolute bottom-0 right-0"
-        style={{
-          width: '140vh',
-          height: '140vh',
-          borderRadius: '50%',
-          transform: 'translate(50%, 50%)',
-          backgroundImage: `
-            linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 1px, transparent 1px)
-          `,
-          backgroundSize: '60px 60px'
-        }}
-      /> */}
-      
       {/* Main Content */}
       <div className="relative z-10 min-h-screen flex flex-col">
         {/* Language Toggle Button */}
         <LanguageToggle />
-
         {/* Header with Logo */}
-        <div className="flex justify-center pt-6 pb-8 items-center">
+        <div className="flex justify-center pt-6 items-center flex-col">
           <div className="text-center flex flex-col items-center">
-            <Image width={80} height={80} src="/logoburger4.svg" alt="Crazy Burger" className=" max-w-xl" />
-            <h2 className="text-[#2c1100]  text-xl font-semibold text-center  ">{t('burgerHero.bioLink')}</h2>
+            <Image
+              width={200}
+              height={200}
+              src="/somtumlogo2.svg"
+              alt="Somtum Hero"
+              className="w-[120px] sm:w-[150px] md:w-[200px] h-auto"
+            />
           </div>
         </div>
 
         {/* Content Grid */}
-        <div className="flex-1 px-6 md:px-12 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-7xl mx-auto w-full pb-8">
+        <div className="flex-1 px-6 md:px-12 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-7xl mx-auto w-full">
           {/* Left Section - Text and Buttons */}
           <div className="space-y-6">
             <div className="space-y-2">
-              <h1 className="text-[#2c1100] text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight" style={{ fontWeight: 600, lineHeight: 1.1 }}>
-                {t('burgerHero.title1')}<br />{t('burgerHero.title2')}
-              </h1>
-              <p className="text-[#2c1100] text-lg md:text-xl tracking-wide">
-                {t('burgerHero.subtitle1')}<br />
-                {t('burgerHero.subtitle2')}
+              <div className="flex flex-col   md:items-start justify-center items-center">
+                <Image
+                  width={400}
+                  height={400}
+                  src="/title1.png"
+                  alt="Somtum Hero"
+                  className="max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl"
+                />
+                <Image
+                  width={300}
+                  height={300}
+                  src="/title.png"
+                  alt="Somtum Hero"
+                  className="mt-2 max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl"
+                />
+              </div>
+
+              <p className="text-white/90 mt-4 text-lg md:text-xl tracking-wide text-center md:text-left font-bold">
+                {t("burgerHero.subtitle1")}
+                <br />
+                {t("burgerHero.subtitle2")}
               </p>
             </div>
 
@@ -81,49 +75,62 @@ export function HeroSection() {
               {/* Menu Button */}
               <a
                 href="/menu"
-                className="flex items-center gap-3 px-6 py-4 rounded-full bg-white text-[#2c1100] hover:bg-[#ff8000] hover:text-white active:bg-[#ff8000] active:text-white transition-all duration-300 group touch-manipulation"
+                className="flex items-center gap-3 px-6 py-4 rounded-full bg-white text-[#2c1100] hover:bg-[#ce3033] hover:text-white active:bg-[#ce3033] active:text-white transition-all duration-300 group touch-manipulation"
               >
-                <Menu className="w-6 h-6 text-[#ff8000] group-hover:text-white group-active:text-white transition-colors" />
-                <span className="uppercase tracking-wide text-lg font-semibold">{t('burgerHero.instagram')}</span>
+                <Menu className="w-6 h-6 text-[#ce3033] group-hover:text-white group-active:text-white transition-colors" />
+                <span className="uppercase tracking-wide text-lg font-bold">
+                  {t("burgerHero.instagram")}
+                </span>
               </a>
 
               {/* Book Table Button */}
               <a
                 href="#"
-                className="flex items-center gap-3 px-6 py-4 rounded-full bg-white text-[#2c1100] hover:bg-[#ff8000] hover:text-white active:bg-[#ff8000] active:text-white transition-all duration-300 group touch-manipulation"
+                className="flex items-center gap-3 px-6 py-4 rounded-full bg-white text-[#2c1100] hover:bg-[#ce3033] hover:text-white active:bg-[#ce3033] active:text-white transition-all duration-300 group touch-manipulation"
               >
-                <BookOpen className="w-6 h-6 text-[#ff8000] group-hover:text-white group-active:text-white transition-colors" />
-                <span className="uppercase tracking-wide text-lg font-semibold">{t('burgerHero.bookTable')}</span>
+                <BookOpen className="w-6 h-6 text-[#ce3033] group-hover:text-white group-active:text-white transition-colors" />
+                <span className="uppercase tracking-wide text-lg font-bold">
+                  {t("burgerHero.bookTable")}
+                </span>
               </a>
 
               {/* Facebook Button */}
               <a
                 href="#"
-                className="flex items-center gap-3 px-6 py-4 rounded-full bg-white text-[#2c1100] hover:bg-[#ff8000] hover:text-white active:bg-[#ff8000] active:text-white transition-all duration-300 group touch-manipulation"
+                className="flex items-center gap-3 px-6 py-4 rounded-full bg-white text-[#2c1100] hover:bg-[#ce3033] hover:text-white active:bg-[#ce3033] active:text-white transition-all duration-300 group touch-manipulation"
               >
-                <Facebook className="w-6 h-6 text-[#ff8000] group-hover:text-white group-active:text-white transition-colors" />
-                <span className="uppercase tracking-wide text-lg font-semibold">{t('burgerHero.facebook')}</span>
+                <Facebook className="w-6 h-6 text-[#ce3033] group-hover:text-white group-active:text-white transition-colors" />
+                <span className="uppercase tracking-wide text-lg font-bold">
+                  {t("burgerHero.facebook")}
+                </span>
               </a>
 
               {/* Line Official Button */}
               <a
                 href="#"
-                className="flex items-center gap-3 px-6 py-4 rounded-full bg-white text-[#2c1100] hover:bg-[#ff8000] hover:text-white active:bg-[#ff8000] active:text-white transition-all duration-300 group touch-manipulation"
+                className="flex items-center gap-3 px-6 py-4 rounded-full bg-white text-[#2c1100] hover:bg-[#ce3033] hover:text-white active:bg-[#ce3033] active:text-white transition-all duration-300 group touch-manipulation"
               >
-                <MapPin className="w-6 h-6 text-[#ff8000] group-hover:text-white group-active:text-white transition-colors" />
-                <span className="uppercase tracking-wide text-lg font-semibold">{t('burgerHero.lineOfficial')}</span>
+                <MapPin className="w-6 h-6 text-[#ce3033] group-hover:text-white group-active:text-white transition-colors" />
+                <span className="uppercase tracking-wide text-lg font-bold">
+                  {t("burgerHero.lineOfficial")}
+                </span>
               </a>
             </div>
           </div>
 
-          {/* Right Section - Burger Image */}
-          <div className="relative lg:pl-12 flex items-center justify-center lg:justify-center">
-            <div className="relative max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-7xl">
-              <Image  width={800}
-                height={800} src="/burgerhero2.svg" alt="Crazy Burger" className="w-full max-w-full" />
+          {/* Right Section - Hero Image */}
+          <div className="relative lg:pl-12 flex items-center justify-center lg:justify-center mt-8 lg:mt-0">
+            <div className="relative w-full max-w-md md:max-w-lg lg:w-full lg:max-w-none lg:scale-130">
+              <Image
+                width={2202}
+                height={1134}
+                src="/somtumhero.png"
+                alt="Somtum Hero"
+                priority
+                className="w-full h-auto object-contain"
+              />
             </div>
           </div>
-          
         </div>
       </div>
     </div>
