@@ -26,7 +26,7 @@ export function MenuSection() {
     : categories;
 
   return (
-    <div className=" min-h-screen bg-slate-50 relative overflow-hidden rounded-t-3xl">
+    <div id="menu" className="min-h-screen bg-slate-50 relative overflow-hidden rounded-t-3xl scroll-mt-0">
       {/* Grid pattern background */}
       <div
         className="absolute inset-0 opacity-5"

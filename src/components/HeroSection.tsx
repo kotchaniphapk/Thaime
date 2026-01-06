@@ -52,7 +52,7 @@ export function HeroSection() {
                   height={400}
                   src="/title1.png"
                   alt="Somtum Hero"
-                  className="max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl"
+                  className="max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl md:pl-0 md:pr-0  pl-2 pr-2"
                 />
                 <Image
                   width={300}
@@ -73,15 +73,21 @@ export function HeroSection() {
             {/* Social Buttons Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 max-w-2xl">
               {/* Menu Button */}
-              <a
-                href="/menu"
-                className="flex items-center gap-3 px-6 py-4 rounded-full bg-white text-[#2c1100] hover:bg-[#ce3033] hover:text-white active:bg-[#ce3033] active:text-white transition-all duration-300 group touch-manipulation"
+              <button
+                type="button"
+                onClick={() => {
+                  const menuSection = document.getElementById('menu');
+                  if (menuSection) {
+                    menuSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }}
+                className="flex items-center gap-3 px-6 py-4 rounded-full bg-white text-[#2c1100] hover:bg-[#ce3033] hover:text-white active:bg-[#ce3033] active:text-white transition-all duration-300 group touch-manipulation cursor-pointer"
               >
                 <Menu className="w-6 h-6 text-[#ce3033] group-hover:text-white group-active:text-white transition-colors" />
                 <span className="uppercase tracking-wide text-lg font-bold">
                   {t("burgerHero.instagram")}
                 </span>
-              </a>
+              </button>
 
               {/* Book Table Button */}
               <a
