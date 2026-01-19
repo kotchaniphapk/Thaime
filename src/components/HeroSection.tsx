@@ -48,18 +48,18 @@ export function HeroSection() {
             <div className="space-y-2">
               <div className="flex flex-col   md:items-start justify-center items-center">
                 <Image
-                  width={400}
-                  height={400}
+                  width={300}
+                  height={300}
                   src="/title1.png"
                   alt="Somtum Hero"
-                  className="max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl md:pl-0 md:pr-0  pl-2 pr-2"
+                  className="max-w-lg md:w-[400px] lg:max-w-3xl xl:max-w-4xl md:pl-0 md:pr-0  pl-2 pr-2"
                 />
                 <Image
                   width={300}
                   height={300}
                   src="/title.png"
                   alt="Somtum Hero"
-                  className="mt-2 max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl"
+                  className="mt-2 max-w-md md:max-w-2xl lg:max-w-3xl xl:max-w-4xl"
                 />
               </div>
 
