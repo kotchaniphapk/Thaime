@@ -136,7 +136,7 @@ function AccordionTrigger({ className, children, ...props }: AccordionTriggerPro
         data-state={isOpen ? "open" : "closed"}
         onClick={() => onValueChange(itemValue)}
         className={cn(
-          "focus-visible:border-ring focus-visible:ring-ring/50 flex flex-1 items-start justify-between gap-4 rounded-md py-4 text-left text-sm font-medium transition-all outline-none hover:underline focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50",
+          "focus-visible:border-ring focus-visible:ring-ring/50 flex flex-1 items-start justify-between gap-4 rounded-md py-4 text-left text-base font-medium transition-all outline-none hover:underline focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50",
           isOpen && "[&>svg]:rotate-180",
           className,
         )}
@@ -165,7 +165,7 @@ function AccordionContent({ className, children, ...props }: AccordionContentPro
       data-slot="accordion-content"
       data-state={isOpen ? "open" : "closed"}
       className={cn(
-        "overflow-hidden text-sm transition-all",
+        "overflow-hidden text-base transition-all",
         isOpen ? "animate-accordion-down" : "animate-accordion-up",
         className
       )}

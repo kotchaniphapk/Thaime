@@ -8,7 +8,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     // Initialize i18n on client side
     if (typeof window !== 'undefined') {
-      const savedLang = localStorage.getItem('i18nextLng') || 'th';
+      const savedLang = localStorage.getItem('i18nextLng') || 'en';
       i18n.changeLanguage(savedLang);
     }
   }, []);

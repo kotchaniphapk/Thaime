@@ -1,16 +1,14 @@
 'use client';
 
 import { HeroSection } from "@/components/HeroSection";
-import { MenuSection } from "@/components/MenuSection";
-import { Footer } from "@/components/footer";
+import { Aboutus } from "@/components/Aboutus";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
-
-
   return (
     <div className="">
       <HeroSection />
-      <MenuSection />
+      <Aboutus />
       <Footer />
     </div>
   );

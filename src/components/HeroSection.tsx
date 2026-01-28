@@ -1,144 +1,145 @@
 "use client";
 
-import { Facebook, BookOpen, MapPin, Menu } from "lucide-react";
-import { useTranslation } from "react-i18next";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 import { LanguageToggle } from "./LanguageToggle";
+import { Button } from "./ui/button";
+import Link from "next/link";
+import { Phone, House, UtensilsCrossed, ShoppingCart } from "lucide-react";
 
 export function HeroSection() {
   const { t } = useTranslation();
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-[#ce3033]">
-      {/* Radiating stripes background pattern */}
+    <section className="relative w-full overflow-x-visible overflow-y-hidden">
+      {/* Background */}
       <div
-        className="absolute inset-0 opacity-30"
+        className="absolute inset-0"
         style={{
-          background: `
-            repeating-conic-gradient(
-              from 0deg at 50% 100%,
-              #000000 0deg 2deg,
-              #1a0000 6deg 12deg
-            )
-          `,
-          backgroundSize: "100% 100%",
+          background:
+            "linear-gradient(90deg, rgba(20,20,20,1) 0%, rgba(0,0,0,1) 28%, rgba(255,106,0,1) 100%)",
         }}
       />
-      {/* Main Content */}
-      <div className="relative z-10 min-h-screen flex flex-col">
-        {/* Language Toggle Button */}
+      <div className="absolute inset-0 bg-[radial-gradient(closest-side,rgba(0,0,0,0)_0%,rgba(0,0,0,0.35)_45%,rgba(0,0,0,0.75)_100%)]" />
+      <div className="absolute inset-0 opacity-40 [background:radial-gradient(circle_at_15%_20%,rgba(255,255,255,0.10)_0%,transparent_35%),radial-gradient(circle_at_90%_35%,rgba(255,106,0,0.12)_0%,transparent_40%)]" />
+
+      {/* Top-right language */}
+      <div className="absolute right-4 top-4 z-20 md:right-8 md:top-6">
         <LanguageToggle />
-        {/* Header with Logo */}
-        <div className="flex justify-center pt-6 items-center flex-col">
-          <div className="text-center flex flex-col items-center">
+      </div>
+
+      <div className="relative z-10 mx-auto flex min-h-[92vh] max-w-7xl flex-col col-span-1 ld:col-span-2 items-center  px-6 py-16 md:flex-row md:gap-10 md:px-10 md:py-16 lg:gap-14 lg:px-12 lg:py-20">
+        {/* Left - z-20 ให้ปุ่มอยู่ชั้นบน ไม่ถูกรูปบัง */}
+        <div className="relative z-20 flex w-full max-w-xl  flex-shrink-0 flex-col items-center gap-6 md:items-start md:justify-center">
+          {/* Logo pill */}
+          <div className="items-center justify-center">
             <Image
-              width={200}
-              height={200}
-              src="/somtumlogo2.svg"
-              alt="Somtum Hero"
-              className="w-[120px] sm:w-[150px] md:w-[200px] h-auto"
+              src="/logo.png"
+              alt={t("heroSection.imageAlt", "Thai food on wheels")}
+              width={280}
+              height={280}
+              className="h-auto w-[240px] md:w-[280px] object-contain"
+              priority
+            />
+          </div>
+
+          <div className="space-y-4">
+            <h1 className="text-4xl font-medium text-white md:text-5xl lg:text-6xl md:text-start text-center">
+              {t("heroSection.title")}
+            </h1>
+            <p className="max-w-lg text-base font-medium text-white/85 lg:text-lg md:text-start text-center">
+              {t("heroSection.subtitle")}
+            </p>
+          </div>
+
+          {/* Buttons */}
+          <div className="grid w-full grid-cols-2 gap-3 sm:gap-4 md:gap-4">
+            <Button
+              asChild
+              className="group h-11 rounded-xl border-0 px-5 text-base font-semibold text-white shadow-xl hover:opacity-95 bg-[linear-gradient(135deg,#ff8533_0%,#ff6900_55%,#e55d00_100%)]"
+            >
+              <Link href="/" className="flex items-center justify-center gap-2">
+                <House className="h-4 w-4" />
+                {t("heroSection.home")}
+              </Link>
+            </Button>
+
+            <Button
+              asChild
+              className="group h-11 rounded-xl border-0 px-5 text-base font-semibold text-white shadow-xl hover:opacity-95 bg-[linear-gradient(135deg,#ff8533_0%,#ff6900_55%,#e55d00_100%)]"
+            >
+              <Link
+                href="/menu"
+                className="flex items-center justify-center gap-2"
+              >
+                <UtensilsCrossed className="h-4 w-4" />
+                {t("heroSection.menu")}
+              </Link>
+            </Button>
+
+            <Button
+              asChild
+              className="h-11 rounded-xl border-0 px-5 text-base font-semibold text-white shadow-xl hover:opacity-95 bg-[linear-gradient(135deg,#ff8533_0%,#ff6900_55%,#e55d00_100%)]"
+            >
+              <Link
+                href="#Footer"
+                className="flex items-center justify-center gap-2"
+              >
+                <Phone className="h-4 w-4" />
+                {t("heroSection.contact")}
+              </Link>
+            </Button>
+
+            <Button
+              asChild
+              className="h-11 rounded-xl border-0 px-5 text-base font-semibold text-white shadow-xl hover:opacity-95 bg-[linear-gradient(135deg,#ff8533_0%,#ff6900_55%,#e55d00_100%)]"
+            >
+              <Link
+                href="/order"
+                className="flex items-center justify-center gap-2"
+              >
+                <ShoppingCart className="h-4 w-4" />
+                {t("heroSection.order")}
+              </Link>
+            </Button>
+          </div>
+
+          {/* Micro trust line */}
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5 text-sm md:text-base text-white/80">
+            <span className="inline-flex items-center rounded-full border border-white/50 bg-white/10 px-4 py-1.5">
+              Thai style
+            </span>
+            <span className="inline-flex items-center rounded-full border border-white/50 bg-white/10 px-4 py-1.5">
+              Street food
+            </span>
+            <span className="inline-flex items-center rounded-full border border-white/50 bg-white/10 px-4 py-1.5">
+              Made fresh
+            </span>
+          </div>
+        </div>
+
+        {/* Right - รูปล้นไปทางขวาได้ ไม่ล้ำไปบังปุ่ม */}
+        <div className="relative z-10 flex flex-1 items-center justify-start overflow-visible md:justify-start md:pl-40">
+          <div className="relative flex origin-left items-center justify-start overflow-visible">
+            <Image
+              src="/hero.png"
+              alt={t(
+                "hero.imageAlt",
+                "Thai food on wheels",
+              )}
+              width={2918}
+              height={1521}
+              className="
+                h-auto w-full
+                max-h-[520px] sm:max-h-[620px] md:max-h-[85vh]
+                object-contain object-left
+                scale-110 md:scale-140 lg:scale-170
+              "
+              priority
             />
           </div>
         </div>
-
-        {/* Content Grid */}
-        <div className="flex-1 px-6 md:px-12 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-7xl mx-auto w-full">
-          {/* Left Section - Text and Buttons */}
-          <div className="space-y-6">
-            <div className="space-y-2">
-              <div className="flex flex-col   md:items-start justify-center items-center">
-                <Image
-                  width={300}
-                  height={300}
-                  src="/title1.png"
-                  alt="Somtum Hero"
-                  className="max-w-lg md:w-[400px] lg:max-w-3xl xl:max-w-4xl md:pl-0 md:pr-0  pl-2 pr-2"
-                />
-                <Image
-                  width={300}
-                  height={300}
-                  src="/title.png"
-                  alt="Somtum Hero"
-                  className="mt-2 max-w-md md:max-w-2xl lg:max-w-3xl xl:max-w-4xl"
-                />
-              </div>
-
-              <p className="text-white/90 mt-4 text-lg md:text-xl tracking-wide text-center md:text-left font-bold">
-                {t("burgerHero.subtitle1")}
-                <br />
-                {t("burgerHero.subtitle2")}
-              </p>
-            </div>
-
-            {/* Social Buttons Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 max-w-2xl">
-              {/* Menu Button */}
-              <button
-                type="button"
-                onClick={() => {
-                  const menuSection = document.getElementById('menu');
-                  if (menuSection) {
-                    menuSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }
-                }}
-                className="flex items-center gap-3 px-6 py-4 rounded-full bg-white text-[#2c1100] hover:bg-[#ce3033] hover:text-white active:bg-[#ce3033] active:text-white transition-all duration-300 group touch-manipulation cursor-pointer"
-              >
-                <Menu className="w-6 h-6 text-[#ce3033] group-hover:text-white group-active:text-white transition-colors" />
-                <span className="uppercase tracking-wide text-lg font-bold">
-                  {t("burgerHero.instagram")}
-                </span>
-              </button>
-
-              {/* Book Table Button */}
-              <a
-                href="#"
-                className="flex items-center gap-3 px-6 py-4 rounded-full bg-white text-[#2c1100] hover:bg-[#ce3033] hover:text-white active:bg-[#ce3033] active:text-white transition-all duration-300 group touch-manipulation"
-              >
-                <BookOpen className="w-6 h-6 text-[#ce3033] group-hover:text-white group-active:text-white transition-colors" />
-                <span className="uppercase tracking-wide text-lg font-bold">
-                  {t("burgerHero.bookTable")}
-                </span>
-              </a>
-
-              {/* Facebook Button */}
-              <a
-                href="#"
-                className="flex items-center gap-3 px-6 py-4 rounded-full bg-white text-[#2c1100] hover:bg-[#ce3033] hover:text-white active:bg-[#ce3033] active:text-white transition-all duration-300 group touch-manipulation"
-              >
-                <Facebook className="w-6 h-6 text-[#ce3033] group-hover:text-white group-active:text-white transition-colors" />
-                <span className="uppercase tracking-wide text-lg font-bold">
-                  {t("burgerHero.facebook")}
-                </span>
-              </a>
-
-              {/* Line Official Button */}
-              <a
-                href="#"
-                className="flex items-center gap-3 px-6 py-4 rounded-full bg-white text-[#2c1100] hover:bg-[#ce3033] hover:text-white active:bg-[#ce3033] active:text-white transition-all duration-300 group touch-manipulation"
-              >
-                <MapPin className="w-6 h-6 text-[#ce3033] group-hover:text-white group-active:text-white transition-colors" />
-                <span className="uppercase tracking-wide text-lg font-bold">
-                  {t("burgerHero.lineOfficial")}
-                </span>
-              </a>
-            </div>
-          </div>
-
-          {/* Right Section - Hero Image */}
-          <div className="relative lg:pl-12 flex items-center justify-center lg:justify-center mt-8 lg:mt-0">
-            <div className="relative w-full max-w-md md:max-w-lg lg:w-full lg:max-w-none lg:scale-130">
-              <Image
-                width={2202}
-                height={1134}
-                src="/somtumhero.png"
-                alt="Somtum Hero"
-                priority
-                className="w-full h-auto object-contain"
-              />
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
+    </section>
   );
 }

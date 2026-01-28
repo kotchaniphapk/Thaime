@@ -1,17 +1,20 @@
 import type { Metadata } from "next";
-import { Thasadith } from "next/font/google";
+import { Outfit  } from "next/font/google";
 import "./globals.css";
 import { I18nProvider } from "@/components/I18nProvider";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
-const thasadith = Thasadith({
-  variable: "--font-thasadith",
-  subsets: ["latin", "thai"],
-  weight: ["400", "700"],
+
+
+const outfit = Outfit({
+  variable: "--font-outfit",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
-  title: "Somtum",
-  description: "Somtum",
+  title: "ThaiMe",
+  description: "Thai food on wheels",
 };
 
 export default function RootLayout({
@@ -22,10 +25,11 @@ export default function RootLayout({
   return (
     <html lang="th">
       <body
-        className={`${thasadith.variable} font-sans antialiased`}
+        className={`${outfit.variable} ${outfit.className} font-sans antialiased`}
       >
         <I18nProvider>
           {children}
+          <ScrollToTop />
         </I18nProvider>
       </body>
     </html>

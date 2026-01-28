@@ -1,0 +1,153 @@
+{
+  "heroSection": {
+    "title": "Mâncare thailandeză pe roți",
+    "subtitle": "Arome autentice thailandeze, servite proaspăt în România",
+    "home": "Acasă",
+    "menu": "Meniu",
+    "contact": "Contact",
+    "order": "Comandă"
+  },
+
+  "menu": {
+    "title": "MENIU",
+    "back": "Înapoi",
+    "backToBio": "Înapoi",
+    "price": "Preț:",
+    "all": "Toate",
+    "showLess": "Arată mai puțin",
+    "readMore": "Arată mai mult",
+    "categories": [
+      {
+        "id": "noodles",
+        "name": "Tăiței (Noodles)",
+        "items": [
+          {
+            "name": "Pad Thai",
+            "description": "Tăiței de orez prăjiți în stil thailandez cu sos Pad Thai de casă, ou și tofu, finalizați cu arahide prăjite, germeni de fasole, ceapă verde și lime proaspăt. (500g)",
+            "price": "Veggie 42 | Pui 49 | Vită 52 | Creveți 56",
+            "image": "https://images.unsplash.com/photo-1559314809-0d155014e29e?w=800&q=80"
+          },
+          {
+            "name": "Pad See Ew",
+            "description": "Tăiței lați de orez prăjiți în sos de soia și sos de stridii, cu ou, morcovi, broccoli și ceapă verde. Gust savuros, ușor afumat. (480g)",
+            "price": "Veggie 40 | Pui 46 | Vită 49 | Creveți 51",
+            "image": "https://images.unsplash.com/photo-1569718212165-3a245399dc08?w=800&q=80"
+          },
+          {
+            "name": "Wok Noodles",
+            "description": "Tăiței proaspeți din ou, prăjiți la wok cu sos de soia și sos de stridii, ou și legume. Aromat și sățios. (480g)",
+            "price": "Veggie 40 | Pui 46 | Vită 49 | Creveți 51",
+            "image": "https://images.unsplash.com/photo-1591814468924-c15188e12186?w=800&q=80"
+          }
+        ]
+      },
+      {
+        "id": "curry-soup",
+        "name": "Curry & Supe",
+        "items": [
+          {
+            "name": "Curry Verde",
+            "description": "Curry cremos cu lapte de cocos, ardei iuți verzi, lemongrass, frunze de lime kaffir și busuioc, gătit cu legume proaspete. Intens și aromat. Servit cu orez jasmine aburit. (500g + 250g)",
+            "price": "Veggie 45 | Pui 51 | Creveți 56",
+            "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=800&q=80"
+          },
+          {
+            "name": "Curry Massaman",
+            "description": "Curry bogat și delicat, cu lapte de cocos, pastă massaman, cartofi și ceapă, presărat cu arahide prăjite. Servit cu orez jasmine aburit. (500g + 250g)",
+            "price": "Pui 49 | Creveți 54",
+            "image": "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=800&q=80"
+          },
+          {
+            "name": "Supă Tom Yum",
+            "description": "Supă thailandeză clasică, acrișoară și picantă, cu lemongrass, galangal și frunze de lime kaffir, echilibrată cu lapte de cocos și ciuperci. Proaspătă și intensă. Servită cu orez jasmine aburit. (500g + 250g)",
+            "price": "Veggie 42 | Pui 49 | Creveți 54",
+            "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&q=80"
+          },
+          {
+            "name": "Supă Tom Kha",
+            "description": "Supă cremoasă cu lapte de cocos, galangal și lemongrass, echilibrată cu suc de lime și ciuperci. Delicată și reconfortantă. Servită cu orez jasmine aburit. (500g + 250g)",
+            "price": "Veggie 42 | Pui 49 | Creveți 54",
+            "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&q=80"
+          }
+        ]
+      },
+      {
+        "id": "rice",
+        "name": "Preparate cu Orez",
+        "items": [
+          {
+            "name": "Pad Kra Pao (Stir-fry cu Busuioc Thailandez)",
+            "description": "Preparat clasic thailandez, prăjit la wok cu usturoi, ardei iuți și busuioc thailandez. Ușor picant și foarte aromat. Servit cu orez jasmine aburit. (450g)",
+            "price": "Pui 46 | Vită 49 | Creveți 53",
+            "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&q=80"
+          },
+          {
+            "name": "Pui cu Nuci Caju (Thai Stir-Fry)",
+            "description": "Pui fraged prăjit la wok cu nuci caju prăjite, ceapă, ceapă verde și ardei gras, într-un sos dulce-sărat. Servit cu orez jasmine aburit. (480g)",
+            "price": "52",
+            "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&q=80"
+          },
+          {
+            "name": "Vită cu Usturoi și Piper",
+            "description": "Felii fragede de vită prăjite la wok cu usturoi, piper măcinat și legume proaspete, în sos savuros de stridii, finalizate cu ceapă crocantă. Servit cu orez jasmine aburit. (480g)",
+            "price": "57",
+            "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=800&q=80"
+          },
+          {
+            "name": "Orez Prăjit Thailandez",
+            "description": "Orez jasmine prăjit cu ou, legume, usturoi, sos de soia și sos de stridii. Simplu, aromat și sățios. (450g)",
+            "price": "Veggie 40 | Pui 46 | Creveți 50",
+            "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&q=80"
+          }
+        ]
+      },
+      {
+        "id": "appetizers",
+        "name": "Aperitive",
+        "items": [
+          {
+            "name": "În curând",
+            "description": "Aperitive noi vor fi adăugate în curând. Rămâneți pe fază!",
+            "price": "—",
+            "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80"
+          }
+        ]
+      }
+    ]
+  },
+
+  "siteName": "ThaiMe Food Truck",
+  "siteUrl": "https://thaime.ro",
+
+  "footer-title": "ThaiMe Food Truck – Mâncare thailandeză autentică, servită proaspăt în România.",
+  "open-time": "Program",
+  "day": "Luni–Vineri",
+  "day-time": "11:00 – 19:00 / Evenimente",
+  "contact": "Contact",
+  "call": "Telefon",
+  "call-number": "076 228 6338",
+  "emailLabel": "E-mail",
+  "email": "contact@thaime.ro",
+  "location": "Locație",
+  "address": "România",
+  "viewMap": "Vezi pe hartă",
+  "mapUrl": "https://goo.gl/maps/5UvoXGl1Sn4IUFsue",
+
+  "orderPage": {
+    "title": "Comandă Acum",
+    "subtitle": "Alege modalitatea preferată de a comanda mâncare thailandeză delicioasă",
+    "whatsapp": "Comandă prin WhatsApp",
+    "whatsappDesc": "Discută direct cu noi",
+    "bolt": "Comandă pe Bolt Food",
+    "boltDesc": "Livrare rapidă la ușa ta",
+    "glovo": "Comandă pe Glovo",
+    "glovoDesc": "Rapid și convenabil",
+    "call": "Sună-ne",
+    "callDesc": "Vorbește direct cu noi",
+    "social": "Urmărește-ne",
+    "socialTitle": "Rămâi la Curent",
+    "socialDesc": "Urmărește-ne pe rețelele sociale pentru evenimente viitoare și oferte speciale",
+    "facebook": "Facebook",
+    "instagram": "Instagram"
+  }
+}
