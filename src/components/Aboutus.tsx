@@ -10,7 +10,7 @@ export function Aboutus() {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(90deg, rgba(255, 106, 0, 1) 0%, rgba(0, 0, 0, 1) 22%, rgba(34, 34, 34, 1) 55%, rgba(55, 55, 55, 1) 100%)",
+            "linear-gradient(90deg, rgba(255, 106, 0, 1) 0%, rgba(0, 0, 0, 1) 22%, rgba(34, 34, 34, 1) 51%, rgba(55, 55, 55, 1) 100%)",
         }}
       />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,rgba(0,0,0,0.25)_0%,rgba(0,0,0,0.55)_55%,rgba(0,0,0,0.7)_100%)]" />
