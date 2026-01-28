@@ -124,3 +124,27 @@
     font-family: var(--font-nunito), sans-serif;
   }
 }
+
+/* About Us section: bigger gradient on mobile */
+@media (max-width: 768px) {
+  .aboutus-gradient.aboutus-gradient-base {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 106, 0, 1) 0%,
+      rgba(255, 95, 25, 0.9) 18%,
+      rgba(200, 70, 20, 0.9) 38%,
+      rgba(100, 40, 15, 0.95) 55%,
+      rgba(45, 30, 20, 1) 72%,
+      rgba(20, 20, 20, 1) 88%,
+      rgba(10, 10, 10, 1) 100%
+    ) !important;
+  }
+  .aboutus-glow {
+    background: radial-gradient(
+      ellipse 200% 180% at 0% 50%,
+      rgba(255, 106, 0, 0.4) 0%,
+      rgba(255, 80, 20, 0.15) 45%,
+      transparent 72%
+    ) !important;
+  }
+}

@@ -5,15 +5,23 @@ import Image from "next/image";
 export function Aboutus() {
   return (
     <section className="relative w-full overflow-hidden py-12 md:py-16 lg:py-20">
-      {/* Background */}
+      {/* Background – smooth fade from left; larger spread on mobile via .aboutus-gradient */}
       <div
-        className="absolute inset-0"
+        className="aboutus-gradient aboutus-gradient-base absolute inset-0"
         style={{
           background:
-            "linear-gradient(90deg, rgba(255, 106, 0, 1) 0%, rgba(0, 0, 0, 1) 22%, rgba(34, 34, 34, 1) 51%, rgba(55, 55, 55, 1) 100%)",
+            "linear-gradient(90deg, rgba(255,106,0,1) 0%, rgba(255,90,20,0.85) 12%, rgba(120,45,10,0.9) 28%, rgba(40,25,15,0.95) 42%, rgba(25,25,25,1) 58%, rgba(15,15,15,1) 100%)",
         }}
       />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,rgba(0,0,0,0.25)_0%,rgba(0,0,0,0.55)_55%,rgba(0,0,0,0.7)_100%)]" />
+      {/* Soft orange glow – larger on mobile via .aboutus-glow */}
+      <div
+        className="aboutus-glow absolute inset-0 opacity-70"
+        style={{
+          background:
+            "radial-gradient(ellipse 120% 150% at 0% 50%, rgba(255,106,0,0.35) 0%, transparent 55%)",
+        }}
+      />
+      <div className="absolute inset-0 bg-[radial-gradient(closest-side,rgba(0,0,0,0)_0%,rgba(0,0,0,0.3)_50%,rgba(0,0,0,0.6)_100%)]" />
       <div className="absolute inset-0 opacity-40 [background:radial-gradient(circle_at_20%_10%,rgba(255,255,255,0.10)_0%,transparent_40%),radial-gradient(circle_at_90%_30%,rgba(255,106,0,0.10)_0%,transparent_35%)]" />
       <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
         <h2 className="text-4xl font-semibold leading-tight text-[#ff6900] sm:text-5xl lg:text-6xl text-center mb-8">
