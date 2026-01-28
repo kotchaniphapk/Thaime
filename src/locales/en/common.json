@@ -133,6 +133,20 @@
   "viewMap": "View on map",
   "mapUrl": "https://goo.gl/maps/5UvoXGl1Sn4IUFsue",
 
+  "aboutus": {
+    "title": "About Us",
+    "imageAlt": "ThaiMe - husband and wife team",
+    "ourStory": "OUR STORY",
+    "headline": "Thai street food,\nnow in Romania",
+    "paragraph1": "We are a husband and wife brought together by love, culture, and a shared passion for great food. I am Thai, my husband is Romanian, and together we bring authentic Thai street food from Bangkok to Romania.",
+    "paragraph2": "I grew up in a family that has been selling Thai food for over 30 years, learning traditional recipes and cooking techniques from a young age. Every dish we serve is full of flavor, care, and stories from our family kitchen.",
+    "paragraph3": "Today, we proudly serve authentic Thai recipes through our food truck in Romania. Our food is not just a meal, it's a connection between Thai and Romanian cultures, sharing warmth and traditions from our family to yours.",
+    "thankYou": "Thank you for being part of our journey ❤️",
+    "tagline": "Authentic recipes, family-made, served with love.",
+    "socialTitle": "Follow us on social media",
+    "socialDesc": "Stay updated with our latest news and promotions."
+  },
+
   "orderPage": {
     "title": "Order Now",
     "subtitle": "Choose your preferred way to order delicious Thai food",

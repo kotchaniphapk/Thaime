@@ -133,6 +133,20 @@
   "viewMap": "Vezi pe hartă",
   "mapUrl": "https://goo.gl/maps/5UvoXGl1Sn4IUFsue",
 
+  "aboutus": {
+    "title": "Despre noi",
+    "imageAlt": "ThaiMe - echipa soț și soție",
+    "ourStory": "POVESTEA NOASTRĂ",
+    "headline": "Mâncare de stradă thailandeză,\nacum în România",
+    "paragraph1": "Suntem un soț și o soție uniți de dragoste, cultură și o pasiune comună pentru mâncarea bună. Sunt thailandeză, soțul meu e român, și împreună aducem mâncare autentică thailandeză de stradă din Bangkok în România.",
+    "paragraph2": "Am crescut într-o familie care vinde mâncare thailandeză de peste 30 de ani, învățând rețete tradiționale și tehnici de gătit de la o vârstă fragedă. Fiecare fel pe care îl servim e plin de aromă, grijă și povești din bucătăria familiei noastre.",
+    "paragraph3": "Astăzi servim cu mândrie rețete thailandeze autentice prin food truck-ul nostru în România. Mâncarea noastră nu e doar o masă, e o legătură între cultura thailandeză și cea română, împărtășind căldura și tradițiile de la familia noastră la a voastră.",
+    "thankYou": "Mulțumim că faci parte din povestea noastră ❤️",
+    "tagline": "Rețete autentice, făcute în familie, servite cu dragoste.",
+    "socialTitle": "Urmărește-ne pe rețelele sociale",
+    "socialDesc": "Rămâi la curent cu noutățile și promoțiile noastre."
+  },
+
   "orderPage": {
     "title": "Comandă Acum",
     "subtitle": "Alege modalitatea preferată de a comanda mâncare thailandeză delicioasă",
