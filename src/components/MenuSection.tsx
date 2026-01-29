@@ -94,7 +94,7 @@ export function MenuSection() {
                     <div className="absolute -inset-1 rounded-3xl bg-orange-400/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="relative bg-white/10 backdrop-blur rounded-2xl md:rounded-3xl border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] flex flex-col p-4 h-full">
                       <div className="w-full flex justify-center mb-4 md:mb-5">
-                        <div className="w-full h-48 md:h-56 lg:h-64 overflow-hidden rounded-xl">
+                        <div className="w-full h-36 md:h-56 lg:h-64 overflow-hidden rounded-xl">
                       {item.image ? (
                         <Image
                           src={item.image}

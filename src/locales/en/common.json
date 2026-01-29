@@ -79,7 +79,7 @@
             "name": "Pad Kra Pao (Thai Basil Stir-Fry)",
             "description": "Wok-fried with garlic, chilies and fragrant Thai basil. Slightly spicy, aromatic and deeply satisfying. Served with steamed jasmine rice. (450g)",
             "price": "Chicken 46 | Beef 49 | Shrimp 53",
-            "image": "/Kra-pao.png"
+            "image": "/Kra-Pao.svg"
           },
           {
             "name": "Thai Stir-Fried Cashew Nuts",
@@ -97,7 +97,7 @@
             "name": "Thai Stir-Fried Rice",
             "description": "Jasmine rice stir-fried with egg, vegetables, garlic, soy sauce and oyster sauce. Simple, savory and comforting. (450g)",
             "price": "Veggie 40 | Chicken 46 | Shrimp 50",
-            "image": "/stir-fried-rice.png"
+            "image": "/Stir-Fried-Rice.png"
           }
         ]
       },
@@ -138,11 +138,12 @@
     "imageAlt": "ThaiMe - husband and wife team",
     "ourStory": "OUR STORY",
     "headline": "Thai street food,\nnow in Romania",
-    "paragraph1": "We are a husband and wife brought together by love, culture, and a shared passion for great food. I am Thai, my husband is Romanian, and together we bring authentic Thai street food from Bangkok to Romania.",
-    "paragraph2": "I grew up in a family that has been selling Thai food for over 30 years, learning traditional recipes and cooking techniques from a young age. Every dish we serve is full of flavor, care, and stories from our family kitchen.",
-    "paragraph3": "Today, we proudly serve authentic Thai recipes through our food truck in Romania. Our food is not just a meal, it's a connection between Thai and Romanian cultures, sharing warmth and traditions from our family to yours.",
-    "thankYou": "Thank you for being part of our journey ❤️",
-    "tagline": "Authentic recipes, family-made, served with love.",
+    "paragraph1": "We are a couple brought together by love, culture, and a shared passion for great food. I am Thai, my husband is Romanian, and together we turned our dream into reality by bringing authentic Thai street food to Romania.",
+    "paragraph2": "I grew up in Bangkok, Thailand, in a family where food was at the heart of everything we did. For more than 30 years, my family has been selling Thai food, and from a young age I helped in our family business—learning traditional recipes, cooking techniques, and the true flavors of Thai cuisine. Those experiences shaped not only my skills, but also my deep respect for Thai food and culture.",
+    "paragraph3": "Today, I proudly bring those same family recipes and authentic flavors to our food truck here in Romania. Every dish we serve is inspired by my childhood, my family's kitchen, and the vibrant street food of Bangkok—prepared with fresh ingredients, love, and attention to detail.",
+    "paragraph4": "Our food truck is more than just a place to eat; it's a bridge between Thailand and Romania, sharing stories, traditions, and flavors from our family to yours.",
+    "thankYou": "Thank you for being part of our journey and supporting our dream. ❤️🇹🇭🇷🇴",
+    "tagline": "Authentic recipes, family-made, served with love.​",
     "socialTitle": "Follow us on social media",
     "socialDesc": "Stay updated with our latest news and promotions."
   },

@@ -69,7 +69,7 @@ export function Footer() {
             <div className="h-64 sm:h-72 md:h-80 lg:h-full">
               <div className="rounded-2xl border border-white/10 bg-black/25 p-2 h-full overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d183324.95843809224!2d26.02247625!3d44.4267674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff7a774c6e5d%3A0x400a93c2d59a6a0e!2sBucharest%2C%20Romania!5e0!3m2!1sen!2s!4v1640000000000!5m2!1sen!2s"
+                  src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.674105440915!2d26.114362176867694!3d44.480852471074904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff146893c349%3A0x1953a8dc0a1068ab!2zVGhhaU1l8J-Mtu-4jyBGb29kIFRydWNr!5e0!3m2!1sen!2sus!4v1769684722316!5m2!1sen!2sus" 
                   width="100%"
                   height="100%"
                   style={{ border: "0" }}
@@ -83,7 +83,7 @@ export function Footer() {
           </div>
           <div className="mt-10 md:mt-12 border-t border-white/10" />
           <p className="mt-6 text-base text-center text-white/70">
-            © Copyright {new Date().getFullYear()}, All Rights Reserved by sitesbrew
+            © Copyright {new Date().getFullYear()}, All Rights Reserved by ThaiMe
           </p>
         </div>
       </div>

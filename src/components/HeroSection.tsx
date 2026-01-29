@@ -27,7 +27,7 @@ export function HeroSection() {
       <div className="absolute right-3 top-3 z-20 md:right-8 md:top-6">
         <LanguageToggle />
       </div>
-      <div className="mt-6 px-4 py-6 md:mt-0 md:px-10 md:py-16 lg:px-12 lg:py-20 relative z-10 mx-auto flex min-h-0 md:min-h-[92vh] max-w-7xl flex-col col-span-1 ld:col-span-2 items-center gap-3 md:flex-row md:gap-10 lg:gap-14">
+      <div className="mt-12 px-4 py-6 md:mt-0 md:px-10 md:py-16 lg:px-12 lg:py-20 relative z-10 mx-auto flex min-h-0 md:min-h-[92vh] max-w-7xl flex-col col-span-1 ld:col-span-2 items-center gap-3 md:flex-row md:gap-10 lg:gap-14">
         {/* Left - z-20 ให้ปุ่มอยู่ชั้นบน ไม่ถูกรูปบัง */}
         <div className="relative z-20 flex w-full max-w-xl shrink-0 flex-col items-center gap-4 md:gap-6 md:items-start md:justify-center">
           {/* Logo pill */}
@@ -104,7 +104,7 @@ export function HeroSection() {
         </div>
 
         {/* Right - รูปล้นไปทางขวาได้ ไม่ล้ำไปบังปุ่ม */}
-        <div className="relative flex flex-1 min-h-0 items-center justify-start overflow-visible mt-8 mb-8 md:mt-0 md:mb-0 md:justify-start md:pl-40 md:-pt-0 md:-pb-0">
+        <div className="relative flex flex-1 min-h-0 items-center justify-start overflow-visible mt-16 mb-16 md:mt-0 md:mb-0 md:justify-start md:pl-40 md:-pt-0 md:-pb-0">
           <div className="relative flex origin-left items-center justify-start overflow-visible">
             <Image
               src="/hero.svg"

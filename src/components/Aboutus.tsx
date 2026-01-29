@@ -81,6 +81,8 @@ export function Aboutus() {
 
                 <p>{t("aboutus.paragraph3")}</p>
 
+                <p>{t("aboutus.paragraph4")}</p>
+
                 <div className="pt-2">
                   <div className="inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
                     <span className="text-white/95">

@@ -25,16 +25,18 @@ export default function OrderPage() {
       icon: TrendingUp,
       title: t('orderPage.bolt'),
       description: t('orderPage.boltDesc'),
-      link: '#',
-      bgGradient: 'from-emerald-500 to-teal-600',
+      link: 'https://food.bolt.eu/en/325-bucharest/p/44220-thaime',
+      bgGradient: 'from-slate-50 to-white',
+      image: '/bolt.svg',
     },
     {
       id: 'glovo',
       icon: TrendingUp,
       title: t('orderPage.glovo'),
       description: t('orderPage.glovoDesc'),
-      link: '#',
-      bgGradient: 'from-yellow-500 to-orange-500',
+      link: 'https://glovoapp.com/ro/ro/bucharest/stores/thai-me-buc',
+      bgGradient: 'from-slate-50 to-white',
+      image: '/glovo.svg',
     },
     {
       id: 'call',
@@ -73,7 +75,7 @@ export default function OrderPage() {
                 alt="ThaiMe"
                 width={200}
                 height={200}
-                className="h-auto w-[180px] object-contain"
+                className="h-auto w-[180px] object-cover"
                 priority
               />
             </div>
@@ -102,8 +104,19 @@ export default function OrderPage() {
                 <div className={`absolute -inset-1 rounded-3xl bg-gradient-to-r ${option.bgGradient} opacity-0 blur-xl group-hover:opacity-20 transition-opacity duration-300`} />
                 
                 <div className="relative flex flex-col items-center text-center space-y-4">
-                  <div className={`flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${option.bgGradient} shadow-lg`}>
-                    <IconComponent className="w-8 h-8 text-white" />
+                  <div className={`flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-r ${option.bgGradient} shadow-lg overflow-hidden p-2`}>
+                    {'image' in option && option.image ? (
+                      <Image
+                        src={option.image}
+                        alt={option.title}
+                        width={300}
+                        height={300}
+                        className="w-full h-full object-contain"
+                        priority
+                      />
+                    ) : (
+                      <IconComponent className="w-8 h-8 text-white" />
+                    )}
                   </div>
                   <h3 className="text-2xl font-bold text-white">{option.title}</h3>
                   <p className="text-white/70">{option.description}</p>
