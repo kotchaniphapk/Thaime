@@ -7,7 +7,7 @@ export function Aboutus() {
   const { t } = useTranslation();
 
   return (
-    <section className="relative w-full overflow-hidden py-12 md:py-16 lg:py-20">
+    <section id="Aboutus" className="relative w-full overflow-hidden py-12 md:py-16 lg:py-20">
       {/* Background – smooth fade from left; larger spread on mobile via .aboutus-gradient */}
       <div
         className="aboutus-gradient aboutus-gradient-base absolute inset-0"

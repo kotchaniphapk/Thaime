@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { LanguageToggle } from "./LanguageToggle";
 import { Button } from "./ui/button";
 import Link from "next/link";
-import { Phone, House, UtensilsCrossed, ShoppingCart } from "lucide-react";
+import { Phone, UtensilsCrossed, ShoppingCart, Info } from "lucide-react";
 
 export function HeroSection() {
   const { t } = useTranslation();
@@ -24,12 +24,12 @@ export function HeroSection() {
       <div className="absolute inset-0 opacity-40 [background:radial-gradient(circle_at_15%_20%,rgba(255,255,255,0.10)_0%,transparent_35%),radial-gradient(circle_at_90%_35%,rgba(255,106,0,0.12)_0%,transparent_40%)]" />
 
       {/* Top-right language */}
-      <div className="absolute right-4 top-4 z-20 md:right-8 md:top-6">
+      <div className="absolute right-3 top-3 z-20 md:right-8 md:top-6">
         <LanguageToggle />
       </div>
-      <div className="mt-4 md:mt-0 relative z-10 mx-auto flex min-h-[92vh] max-w-7xl flex-col col-span-1 ld:col-span-2 items-center  px-6 py-16 md:flex-row md:gap-10 md:px-10 md:py-16 lg:gap-14 lg:px-12 lg:py-20">
+      <div className="mt-6 px-4 py-6 md:mt-0 md:px-10 md:py-16 lg:px-12 lg:py-20 relative z-10 mx-auto flex min-h-0 md:min-h-[92vh] max-w-7xl flex-col col-span-1 ld:col-span-2 items-center gap-3 md:flex-row md:gap-10 lg:gap-14">
         {/* Left - z-20 ให้ปุ่มอยู่ชั้นบน ไม่ถูกรูปบัง */}
-        <div className="relative z-20 flex w-full max-w-xl  flex-shrink-0 flex-col items-center gap-6 md:items-start md:justify-center">
+        <div className="relative z-20 flex w-full max-w-xl shrink-0 flex-col items-center gap-4 md:gap-6 md:items-start md:justify-center">
           {/* Logo pill */}
           <div className="items-center justify-center">
             <Image
@@ -42,8 +42,8 @@ export function HeroSection() {
             />
           </div>
 
-          <div className="space-y-4">
-            <h1 className="text-4xl font-medium text-white md:text-5xl lg:text-6xl md:text-start text-center">
+          <div className="space-y-3 md:space-y-4">
+            <h1 className="text-3xl font-medium text-white md:text-5xl lg:text-6xl md:text-start text-center">
               {t("heroSection.title")}
             </h1>
             <p className="max-w-lg text-base font-medium text-white/85 lg:text-lg md:text-start text-center">
@@ -52,18 +52,8 @@ export function HeroSection() {
           </div>
 
           {/* Buttons */}
-          <div className="grid w-full grid-cols-2 gap-3 sm:gap-4 md:gap-4">
-            <Button
-              asChild
-              className="group h-11 rounded-xl border-0 px-5 text-base font-semibold text-white shadow-xl hover:opacity-95 bg-[linear-gradient(135deg,#ff8533_0%,#ff6900_55%,#e55d00_100%)]"
-            >
-              <Link href="/" className="flex items-center justify-center gap-2">
-                <House className="h-4 w-4" />
-                {t("heroSection.home")}
-              </Link>
-            </Button>
-
-            <Button
+          <div className="grid w-full grid-cols-2 gap-2 sm:gap-3 md:gap-3 mt-1 md:mt-0">
+          <Button
               asChild
               className="group h-11 rounded-xl border-0 px-5 text-base font-semibold text-white shadow-xl hover:opacity-95 bg-[linear-gradient(135deg,#ff8533_0%,#ff6900_55%,#e55d00_100%)]"
             >
@@ -73,6 +63,15 @@ export function HeroSection() {
               >
                 <UtensilsCrossed className="h-4 w-4" />
                 {t("heroSection.menu")}
+              </Link>
+            </Button>
+            <Button
+              asChild
+              className="group h-11 rounded-xl border-0 px-5 text-base font-semibold text-white shadow-xl hover:opacity-95 bg-[linear-gradient(135deg,#ff8533_0%,#ff6900_55%,#e55d00_100%)]"
+            >
+              <Link href="#Aboutus"  className="flex items-center justify-center gap-2">
+                <Info className="h-4 w-4" />
+                {t("aboutus.title")}
               </Link>
             </Button>
 
@@ -102,26 +101,13 @@ export function HeroSection() {
               </Link>
             </Button>
           </div>
-
-          {/* Micro trust line */}
-          <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5 text-sm md:text-base text-white/80">
-            <span className="inline-flex items-center rounded-full border border-white/50 bg-white/10 px-4 py-1.5">
-              Thai style
-            </span>
-            <span className="inline-flex items-center rounded-full border border-white/50 bg-white/10 px-4 py-1.5">
-              Street food
-            </span>
-            <span className="inline-flex items-center rounded-full border border-white/50 bg-white/10 px-4 py-1.5">
-              Made fresh
-            </span>
-          </div>
         </div>
 
         {/* Right - รูปล้นไปทางขวาได้ ไม่ล้ำไปบังปุ่ม */}
-        <div className="p-2 md:p-0 relative z-10 flex flex-1 items-center justify-start overflow-visible md:justify-start md:pl-40">
+        <div className="relative flex flex-1 min-h-0 items-center justify-start overflow-visible mt-8 mb-8 md:mt-0 md:mb-0 md:justify-start md:pl-40 md:-pt-0 md:-pb-0">
           <div className="relative flex origin-left items-center justify-start overflow-visible">
             <Image
-              src="/hero.png"
+              src="/hero.svg"
               alt={t(
                 "hero.imageAlt",
                 "Thai food on wheels",
@@ -130,9 +116,9 @@ export function HeroSection() {
               height={1521}
               className="
                 h-auto w-full
-                max-h-[520px] sm:max-h-[620px] md:max-h-[85vh]
-                object-contain object-left
-                scale-110 md:scale-140 lg:scale-170
+                 md:max-h-[85vh]
+                object-contain
+                scale-100 md:scale-140 lg:scale-170
               "
               priority
             />

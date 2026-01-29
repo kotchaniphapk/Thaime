@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 import { TopBar } from "./TopBar";
+import Image from "next/image";
+import { Utensils } from "lucide-react";
 
 export function MenuSection() {
   const { t } = useTranslation();
@@ -93,12 +94,20 @@ export function MenuSection() {
                     <div className="absolute -inset-1 rounded-3xl bg-orange-400/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="relative bg-white/10 backdrop-blur rounded-2xl md:rounded-3xl border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] flex flex-col p-4 h-full">
                       <div className="w-full flex justify-center mb-4 md:mb-5">
-                        <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden shadow-lg ring-4 ring-white/20">
-                          <ImageWithFallback
-                            src={item.image}
-                            alt={item.name}
-                            className="w-full h-full object-cover"
-                          />
+                        <div className="w-full h-48 md:h-56 lg:h-64 overflow-hidden rounded-xl">
+                      {item.image ? (
+                        <Image
+                          src={item.image}
+                          alt={item.name}
+                          width={200}
+                          height={200}
+                          className="w-full h-full object-contain"
+                        />
+                      ) : (
+                        <div className="flex items-center justify-center w-full h-full min-h-48 md:min-h-56 lg:min-h-64 rounded-xl bg-white/10 border border-white/20">
+                          <Utensils className="w-16 h-16 md:w-20 md:h-20 text-white/70" strokeWidth={1.5} />
+                        </div>
+                      )}
                         </div>
                       </div>
                       <div className="flex flex-col flex-1 space-y-2">
@@ -123,18 +132,14 @@ export function MenuSection() {
                               {openDesc
                                 ? t("menu.showLess") || "Show less"
                                 : t("menu.readMore") || "Read more"}
-                            </button>
+                            </button> 
                           )}
                         </div>
 
-                        <div className="mt-auto w-full rounded-2xl bg-[linear-gradient(135deg,#ff8533_0%,#ff6900_55%,#e55d00_100%)] px-4 py-3 shadow-lg hover:opacity-95 transition">
-                          <div className="flex flex-col items-center gap-1">
-                            {/* Price options */}
-                            <span className="text-base text-white/90 font-semibold text-center">
-                              {item.price}
-                            </span>
-                            <span className="text-base text-white font-bold tracking-wide">
-                              RON
+                        <div className="mt-auto w-full rounded-2xl bg-[linear-gradient(135deg,#ff8533_0%,#ff6900_55%,#e55d00_100%)] px-4 py-3 shadow-lg hover:opacity-95 transition h-20 flex flex-col justify-center">
+                          <div className="flex flex-col items-center justify-center gap-0.5 h-full">
+                            <span className="text-base text-white font-bold tracking-wide text-center line-clamp-2 leading-tight">
+                              {item.price} RON
                             </span>
                           </div>
                         </div>

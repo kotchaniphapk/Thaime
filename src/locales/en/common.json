@@ -25,19 +25,19 @@
             "name": "Pad Thai",
             "description": "Classic Thai stir-fried rice noodles with homemade Pad Thai sauce, egg and tofu. Finished with roasted peanuts, bean sprouts, spring onion and fresh lime. (500g)",
             "price": "Veggie 42 | Chicken 49 | Beef 52 | Shrimp 56",
-            "image": "https://images.unsplash.com/photo-1559314809-0d155014e29e?w=800&q=80"
+            "image": "/Pad-Thai.png"
           },
           {
             "name": "Pad See Ew",
             "description": "Wide rice noodles stir-fried in rich soy & oyster sauce with egg, carrots, broccoli and spring onion. Slightly smoky, savory and comforting. (480g)",
             "price": "Veggie 40 | Chicken 46 | Beef 49 | Shrimp 51",
-            "image": "https://images.unsplash.com/photo-1569718212165-3a245399dc08?w=800&q=80"
+            "image": "/Pad-See-Ew.png"
           },
           {
             "name": "Wok Noodles",
             "description": "Fresh egg noodles wok-tossed in soy & oyster sauce with egg and vegetables. Savory, aromatic, and satisfying. (480g)",
             "price": "Veggie 40 | Chicken 46 | Beef 49 | Shrimp 51",
-            "image": "https://images.unsplash.com/photo-1591814468924-c15188e12186?w=800&q=80"
+            "image": "/W-Noodle.png"
           }
         ]
       },
@@ -49,25 +49,25 @@
             "name": "Green Curry",
             "description": "Creamy coconut milk curry with green chilies, lemongrass, kaffir lime leaves and basil, cooked with fresh vegetables. Bold and aromatic. Served with steamed jasmine rice. (500g + 250g)",
             "price": "Veggie 45 | Chicken 51 | Shrimp 56",
-            "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=800&q=80"
+            "image": "/Green-Curry.png"
           },
           {
             "name": "Massaman Curry",
             "description": "Rich and mild curry made with coconut milk, massaman paste, potatoes and onions, topped with roasted peanuts. Served with steamed jasmine rice. (500g + 250g)",
             "price": "Chicken 49 | Shrimp 54",
-            "image": "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=800&q=80"
+            "image": "/Massaman-Curry.png"
           },
           {
             "name": "Tom Yum Soup",
             "description": "Classic Thai hot-and-sour soup with lemongrass, galangal and kaffir lime leaves, balanced with coconut milk and mushrooms. Bright and bold. Served with steamed jasmine rice. (500g + 250g)",
             "price": "Veggie 42 | Chicken 49 | Shrimp 54",
-            "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&q=80"
+            "image": "/Tom-Yum-Soup.png"
           },
           {
             "name": "Tom Kha Soup",
             "description": "Creamy coconut soup scented with galangal and lemongrass, finished with fresh lime and mushrooms. Gentle, fragrant and comforting. Served with steamed jasmine rice. (500g + 250g)",
             "price": "Veggie 42 | Chicken 49 | Shrimp 54",
-            "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&q=80"
+            "image": "/Tom-Kha-Soup.png"
           }
         ]
       },
@@ -79,25 +79,25 @@
             "name": "Pad Kra Pao (Thai Basil Stir-Fry)",
             "description": "Wok-fried with garlic, chilies and fragrant Thai basil. Slightly spicy, aromatic and deeply satisfying. Served with steamed jasmine rice. (450g)",
             "price": "Chicken 46 | Beef 49 | Shrimp 53",
-            "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&q=80"
+            "image": "/Kra-pao.png"
           },
           {
             "name": "Thai Stir-Fried Cashew Nuts",
             "description": "Crispy chicken stir-fried with roasted cashew nuts, onions, spring onions and bell peppers in a lightly sweet-savory sauce. Served with steamed jasmine rice. (480g)",
             "price": "52",
-            "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&q=80"
+            "image": "/Cashew-Nuts.png"
           },
           {
             "name": "Thai Stir-Fried Garlic Pepper Beef",
             "description": "Tender beef wok-fried with garlic, ground pepper and fresh vegetables in savory oyster sauce, topped with crispy onions. Served with steamed jasmine rice. (480g)",
             "price": "57",
-            "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=800&q=80"
+            "image": "/Garlic-Pepper-Beef.png"
           },
           {
             "name": "Thai Stir-Fried Rice",
             "description": "Jasmine rice stir-fried with egg, vegetables, garlic, soy sauce and oyster sauce. Simple, savory and comforting. (450g)",
             "price": "Veggie 40 | Chicken 46 | Shrimp 50",
-            "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&q=80"
+            "image": "/stir-fried-rice.png"
           }
         ]
       },
@@ -109,7 +109,7 @@
             "name": "Coming soon",
             "description": "New appetizers will be added soon. Stay tuned!",
             "price": "—",
-            "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80"
+            "image": ""
           }
         ]
       }
