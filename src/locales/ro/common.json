@@ -49,25 +49,25 @@
             "name": "Curry Verde",
             "description": "Curry cremos cu lapte de cocos, ardei iuți verzi, lemongrass, frunze de lime kaffir și busuioc, gătit cu legume proaspete. Intens și aromat. Servit cu orez jasmine aburit. (500g + 250g)",
             "price": "Veggie 45 | Pui 51 | Creveți 56",
-            "image": "/Curry-Green.png"
+            "image": "/Green-Curry.png"
           },
           {
             "name": "Curry Massaman",
             "description": "Curry bogat și delicat, cu lapte de cocos, pastă massaman, cartofi și ceapă, presărat cu arahide prăjite. Servit cu orez jasmine aburit. (500g + 250g)",
             "price": "Pui 49 | Creveți 54",
-            "image": "/Curry-Massaman.svg"
+            "image": "/Massaman-Curry.png"
           },
           {
             "name": "Supă Tom Yum",
             "description": "Supă thailandeză clasică, acrișoară și picantă, cu lemongrass, galangal și frunze de lime kaffir, echilibrată cu lapte de cocos și ciuperci. Proaspătă și intensă. Servită cu orez jasmine aburit. (500g + 250g)",
             "price": "Veggie 42 | Pui 49 | Creveți 54",
-            "image": "/Tom-Yum.png"
+            "image": "/Tom-Yum-Soup.png"
           },
           {
             "name": "Supă Tom Kha",
             "description": "Supă cremoasă cu lapte de cocos, galangal și lemongrass, echilibrată cu suc de lime și ciuperci. Delicată și reconfortantă. Servită cu orez jasmine aburit. (500g + 250g)",
             "price": "Veggie 42 | Pui 49 | Creveți 54",
-            "image": "/Tom-Kha.png"
+            "image": "/Tom-Kha-Soup.png"
           }
         ]
       },
@@ -79,19 +79,19 @@
             "name": "Pad Kra Pao (Stir-fry cu Busuioc Thailandez)",
             "description": "Preparat clasic thailandez, prăjit la wok cu usturoi, ardei iuți și busuioc thailandez. Ușor picant și foarte aromat. Servit cu orez jasmine aburit. (450g)",
             "price": "Pui 46 | Vită 49 | Creveți 53",
-            "image": "/Kra-pao.svg"
+            "image": "/Kro-pao.svg"
           },
           {
-            "name": "Pui cu Nuci Caju (Thai Stir-Fry)",
+            "name": "Pui cu Nuci Caju",
             "description": "Pui fraged prăjit la wok cu nuci caju prăjite, ceapă, ceapă verde și ardei gras, într-un sos dulce-sărat. Servit cu orez jasmine aburit. (480g)",
             "price": "52",
-            "image": "/Stir-Fried-Nuts.png"
+            "image": "/Cashew-Nuts.png"
           },
           {
             "name": "Vită cu Usturoi și Piper",
             "description": "Felii fragede de vită prăjite la wok cu usturoi, piper măcinat și legume proaspete, în sos savuros de stridii, finalizate cu ceapă crocantă. Servit cu orez jasmine aburit. (480g)",
             "price": "57",
-            "image": "/Stir-Fried-Beef.png"
+            "image": "/Garlic-Pepper-Beef.png"
           },
           {
             "name": "Orez Prăjit Thailandez",
