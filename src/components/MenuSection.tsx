@@ -104,8 +104,8 @@ export function MenuSection() {
                           className="w-full h-full object-contain"
                         />
                       ) : (
-                        <div className="flex items-center justify-center w-full h-full min-h-48 md:min-h-56 lg:min-h-64 rounded-xl bg-white/10 border border-white/20">
-                          <Utensils className="w-16 h-16 md:w-20 md:h-20 text-white/70" strokeWidth={1.5} />
+                        <div className="flex items-center justify-center w-full h-full min-h-36 min-[768px]:min-h-56 min-[1024px]:min-h-64 rounded-xl bg-white/10 border border-white/20">
+                          <Utensils className="w-16 h-16 md:w-20 md:h-20 text-white/70 shrink-0" strokeWidth={1.5} />
                         </div>
                       )}
                         </div>
