@@ -112,8 +112,8 @@ export function HeroSection() {
                 "hero.imageAlt",
                 "Thai food on wheels",
               )}
-              width={2918}
-              height={1521}
+              width={1459}
+              height={760}
               className="
                 h-auto w-full
                  md:max-h-[85vh]
