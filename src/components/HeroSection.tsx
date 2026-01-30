@@ -55,7 +55,7 @@ export function HeroSection() {
           <div className="grid w-full grid-cols-2 gap-2 sm:gap-3 md:gap-3 mt-1 md:mt-0">
           <Button
               asChild
-              className="group h-10 sm:h-11 rounded-xl border-0 px-3 sm:px-5 text-sm sm:text-base font-semibold text-white shadow-xl hover:opacity-95 bg-[linear-gradient(135deg,#ff8533_0%,#ff6900_55%,#e55d00_100%)]"
+              className="group h-11 rounded-xl border-0 px-5 text-sm sm:text-base font-semibold text-white shadow-xl hover:opacity-95 bg-[linear-gradient(135deg,#ff8533_0%,#ff6900_55%,#e55d00_100%)]"
             >
               <Link
                 href="/menu"
@@ -67,7 +67,7 @@ export function HeroSection() {
             </Button>
             <Button
               asChild
-              className="group h-10 sm:h-11 rounded-xl border-0 px-3 sm:px-5 text-sm sm:text-base font-semibold text-white shadow-xl hover:opacity-95 bg-[linear-gradient(135deg,#ff8533_0%,#ff6900_55%,#e55d00_100%)]"
+              className="group h-11 rounded-xl border-0 px-5 text-sm sm:text-base font-semibold text-white shadow-xl hover:opacity-95 bg-[linear-gradient(135deg,#ff8533_0%,#ff6900_55%,#e55d00_100%)]"
             >
               <Link href="#Aboutus"  className="flex items-center justify-center gap-1.5 sm:gap-2">
                 <Info className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0" />
@@ -77,7 +77,7 @@ export function HeroSection() {
 
             <Button
               asChild
-              className="h-10 sm:h-11 rounded-xl border-0 px-3 sm:px-5 text-sm sm:text-base font-semibold text-white shadow-xl hover:opacity-95 bg-[linear-gradient(135deg,#ff8533_0%,#ff6900_55%,#e55d00_100%)]"
+              className="h-11 rounded-xl border-0 px-5 text-sm sm:text-base font-semibold text-white shadow-xl hover:opacity-95 bg-[linear-gradient(135deg,#ff8533_0%,#ff6900_55%,#e55d00_100%)]"
             >
               <Link
                 href="#Footer"
@@ -90,7 +90,7 @@ export function HeroSection() {
 
             <Button
               asChild
-              className="h-10 sm:h-11 rounded-xl border-0 px-3 sm:px-5 text-sm sm:text-base font-semibold text-white shadow-xl hover:opacity-95 bg-[linear-gradient(135deg,#ff8533_0%,#ff6900_55%,#e55d00_100%)]"
+              className="h-11 rounded-xl border-0 px-5 text-sm sm:text-base font-semibold text-white shadow-xl hover:opacity-95 bg-[linear-gradient(135deg,#ff8533_0%,#ff6900_55%,#e55d00_100%)]"
             >
               <Link
                 href="/order"
