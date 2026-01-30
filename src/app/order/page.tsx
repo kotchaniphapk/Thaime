@@ -65,31 +65,31 @@ export default function OrderPage() {
       <TopBar />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto max-w-6xl px-6 py-12 md:px-10 md:py-16 lg:px-12 lg:py-20">
+      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 md:px-10 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
         {/* Logo & Title */}
-        <div className="text-center mb-12 md:mb-16">
-          <div className="flex justify-center mb-6">
-            <div className="rounded-2xl">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <div className="flex justify-center mb-4 sm:mb-6">
+            <div className="rounded-xl sm:rounded-2xl">
               <Image
                 src="/logo.png"
                 alt="ThaiMe"
                 width={200}
                 height={200}
-                className="h-auto w-[180px] object-cover"
+                className="h-auto w-[140px] sm:w-[180px] md:w-[200px] object-cover"
                 priority
               />
             </div>
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 px-2">
             {t('orderPage.title')}
           </h1>
-          <p className="text-lg sm:text-xl text-white/85 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-white/85 max-w-2xl mx-auto px-2">
             {t('orderPage.subtitle')}
           </p>
         </div>
 
         {/* Order Options Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12 md:mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-12 md:mb-16">
           {orderOptions.map((option) => {
             const IconComponent = option.icon;
             return (
@@ -98,13 +98,13 @@ export default function OrderPage() {
                 href={option.link}
                 target={option.id !== 'call' ? '_blank' : undefined}
                 rel={option.id !== 'call' ? 'noopener noreferrer' : undefined}
-                className="group relative overflow-hidden rounded-3xl border border-white/10 bg-black/30 backdrop-blur-xl p-8 shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,106,0,0.3)]"
+                className="group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-white/10 bg-black/30 backdrop-blur-xl p-6 sm:p-8 shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,106,0,0.3)]"
               >
                 {/* Glow effect */}
-                <div className={`absolute -inset-1 rounded-3xl bg-gradient-to-r ${option.bgGradient} opacity-0 blur-xl group-hover:opacity-20 transition-opacity duration-300`} />
+                <div className={`absolute -inset-1 rounded-2xl sm:rounded-3xl bg-gradient-to-r ${option.bgGradient} opacity-0 blur-xl group-hover:opacity-20 transition-opacity duration-300`} />
                 
-                <div className="relative flex flex-col items-center text-center space-y-4">
-                  <div className={`flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-r ${option.bgGradient} shadow-lg overflow-hidden p-2`}>
+                <div className="relative flex flex-col items-center text-center space-y-3 sm:space-y-4">
+                  <div className={`flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-xl sm:rounded-2xl bg-gradient-to-r ${option.bgGradient} shadow-lg overflow-hidden p-2`}>
                     {'image' in option && option.image ? (
                       <Image
                         src={option.image}
@@ -115,11 +115,11 @@ export default function OrderPage() {
                         priority
                       />
                     ) : (
-                      <IconComponent className="w-8 h-8 text-white" />
+                      <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                     )}
                   </div>
-                  <h3 className="text-2xl font-bold text-white">{option.title}</h3>
-                  <p className="text-white/70">{option.description}</p>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white">{option.title}</h3>
+                  <p className="text-sm sm:text-base text-white/70">{option.description}</p>
                 </div>
               </a>
             );
@@ -127,24 +127,24 @@ export default function OrderPage() {
         </div>
 
         {/* Social Media Section */}
-        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-black/30 backdrop-blur-xl p-8 md:p-10 shadow-2xl">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+        <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-white/10 bg-black/30 backdrop-blur-xl p-6 sm:p-8 md:p-10 shadow-2xl">
+          <div className="text-center mb-6 sm:mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-3 px-2">
               {t('orderPage.socialTitle')}
             </h2>
-            <p className="text-lg text-white/85">
+            <p className="text-base sm:text-lg text-white/85 px-2">
               {t('orderPage.socialDesc')}
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center justify-center gap-3 sm:gap-4">
             <a
               href="https://www.facebook.com/profile.php?id=100091929537003"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-3 px-6 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]"
+              className="group flex items-center justify-center gap-2 sm:gap-3 px-5 sm:px-6 py-3 sm:py-4 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 text-white text-sm sm:text-base font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]"
             >
-              <FaFacebookF className="w-5 h-5" />
+              <FaFacebookF className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
               <span>{t('orderPage.facebook')}</span>
             </a>
 
@@ -152,9 +152,9 @@ export default function OrderPage() {
               href="https://www.instagram.com/thaime_ro/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-3 px-6 py-4 rounded-xl bg-gradient-to-r from-pink-600 via-purple-600 to-orange-500 text-white font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(236,72,153,0.5)]"
+              className="group flex items-center justify-center gap-2 sm:gap-3 px-5 sm:px-6 py-3 sm:py-4 rounded-xl bg-gradient-to-r from-pink-600 via-purple-600 to-orange-500 text-white text-sm sm:text-base font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(236,72,153,0.5)]"
             >
-              <FaInstagram className="w-5 h-5" />
+              <FaInstagram className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
               <span>{t('orderPage.instagram')}</span>
             </a>
           </div>

@@ -26,21 +26,21 @@ export function Aboutus() {
       />
       <div className="absolute inset-0 bg-[radial-gradient(closest-side,rgba(0,0,0,0)_0%,rgba(0,0,0,0.3)_50%,rgba(0,0,0,0.6)_100%)]" />
       <div className="absolute inset-0 opacity-40 [background:radial-gradient(circle_at_20%_10%,rgba(255,255,255,0.10)_0%,transparent_40%),radial-gradient(circle_at_90%_30%,rgba(255,106,0,0.10)_0%,transparent_35%)]" />
-      <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
-        <h2 className="text-4xl font-semibold leading-tight text-[#ff6900] sm:text-5xl lg:text-6xl text-center mb-8">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 md:px-10 lg:px-12">
+        <h2 className="text-3xl sm:text-5xl lg:text-6xl font-semibold leading-tight text-[#ff6900] text-center mb-6 sm:mb-8">
           {t("aboutus.title")}
         </h2>
       </div>
-      <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
-        <div className="grid items-center gap-8 md:grid-cols-2 md:gap-12 lg:gap-16">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 md:px-10 lg:px-12">
+        <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-16">
           {/* Image card */}
-          <div className="relative flex justify-center md:justify-end">
-            <div className="relative w-full max-w-sm md:max-w-md lg:max-w-lg">
+          <div className="relative flex justify-center md:justify-end order-1">
+            <div className="relative w-full lg:max-w-lg">
               {/* softer glow */}
-              <div className="absolute -inset-3 rounded-3xl bg-white/5 blur-2xl" />
+              <div className="absolute -inset-2 sm:-inset-3 rounded-2xl sm:rounded-3xl bg-white/5 blur-2xl" />
 
-              <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-black/30 shadow-xl">
-                <div className="relative aspect-[3/4] w-full">
+              <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-white/10 bg-black/30 shadow-xl justify-center items-center">
+                <div className="relative aspect-[3/4] w-full justify-center items-center">
                   <Image
                     src="/Aboutus.png"
                     alt={t("aboutus.imageAlt")}
@@ -56,14 +56,14 @@ export function Aboutus() {
           </div>
 
           {/* Text card */}
-          <div className="relative">
-            <div className="absolute -inset-2 rounded-3xl bg-white/10 blur-2xl" />
-            <div className="relative rounded-3xl border border-white/10 bg-black/30 p-6 md:p-8 lg:p-10 shadow-2xl">
-              <p className="text-xs tracking-[0.25em] text-white/70">
+          <div className="relative order-2">
+            <div className="absolute -inset-1 sm:-inset-2 rounded-2xl sm:rounded-3xl bg-white/10 blur-2xl" />
+            <div className="relative rounded-2xl sm:rounded-3xl border border-white/10 bg-black/30 p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl">
+              <p className="text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.25em] text-white/70">
                 {t("aboutus.ourStory")}
               </p>
 
-              <h2 className="mt-4 text-3xl md:text-4xl font-semibold text-white leading-tight">
+              <h2 className="mt-3 sm:mt-4 text-2xl sm:text-3xl md:text-4xl font-semibold text-white leading-tight">
                 {t("aboutus.headline").split("\n").map((line, i) => (
                   <span key={i}>
                     {i > 0 && <br />}
@@ -72,7 +72,7 @@ export function Aboutus() {
                 ))}
               </h2>
 
-              <div className="mt-6 space-y-4 text-white/90 text-base md:text-lg leading-relaxed">
+              <div className="mt-4 sm:mt-6 space-y-3 sm:space-y-4 text-white/90 text-sm sm:text-base md:text-lg leading-relaxed">
                 <p className="font-medium text-white">
                   {t("aboutus.paragraph1")}
                 </p>
@@ -84,8 +84,8 @@ export function Aboutus() {
                 <p>{t("aboutus.paragraph4")}</p>
 
                 <div className="pt-2">
-                  <div className="inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
-                    <span className="text-white/95">
+                  <div className="inline-flex items-center gap-2 sm:gap-3 rounded-xl sm:rounded-2xl border border-white/10 bg-white/5 px-3 sm:px-4 py-2 sm:py-3">
+                    <span className="text-sm sm:text-base text-white/95">
                       {t("aboutus.thankYou")}
                     </span>
                   </div>
@@ -93,31 +93,31 @@ export function Aboutus() {
               </div>
 
               {/* little accent line */}
-              <div className="mt-8 h-px w-full bg-gradient-to-r from-transparent via-white/15 to-transparent" />
-              <div className="mt-4 text-base text-white/70">
+              <div className="mt-6 sm:mt-8 h-px w-full bg-gradient-to-r from-transparent via-white/15 to-transparent" />
+              <div className="mt-3 sm:mt-4 text-sm sm:text-base text-white/70">
                 {t("aboutus.tagline")}
               </div>
             </div>
           </div>
         </div>
-        <div className="mt-8 md:mt-12 relative overflow-hidden rounded-3xl border border-white/10 bg-black/30 backdrop-blur-xl p-8 md:p-10 shadow-2xl">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+        <div className="mt-6 sm:mt-8 md:mt-12 relative overflow-hidden rounded-2xl sm:rounded-3xl border border-white/10 bg-black/30 backdrop-blur-xl p-6 sm:p-8 md:p-10 shadow-2xl">
+          <div className="text-center mb-6 sm:mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-3">
               {t("aboutus.socialTitle")}
             </h2>
-            <p className="text-lg text-white/85">
+            <p className="text-base sm:text-lg text-white/85 px-2">
               {t("aboutus.socialDesc")}
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center justify-center gap-3 sm:gap-4">
             <a
               href="https://www.facebook.com/profile.php?id=100091929537003"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-3 px-6 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]"
+              className="group flex items-center justify-center gap-2 sm:gap-3 px-5 sm:px-6 py-3 sm:py-4 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 text-white text-sm sm:text-base font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]"
             >
-              <FaFacebookF className="w-5 h-5" />
+              <FaFacebookF className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
               <span>{t('orderPage.facebook')}</span>
             </a>
 
@@ -125,9 +125,9 @@ export function Aboutus() {
               href="https://www.instagram.com/thaime_ro/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-3 px-6 py-4 rounded-xl bg-gradient-to-r from-pink-600 via-purple-600 to-orange-500 text-white font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(236,72,153,0.5)]"
+              className="group flex items-center justify-center gap-2 sm:gap-3 px-5 sm:px-6 py-3 sm:py-4 rounded-xl bg-gradient-to-r from-pink-600 via-purple-600 to-orange-500 text-white text-sm sm:text-base font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(236,72,153,0.5)]"
             >
-              <FaInstagram className="w-5 h-5" />
+              <FaInstagram className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
               <span>{t('orderPage.instagram')}</span>
             </a>
           </div>
