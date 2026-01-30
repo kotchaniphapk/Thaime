@@ -107,7 +107,7 @@ export function HeroSection() {
         <div className="relative flex flex-1 min-h-0 items-center justify-start overflow-visible mt-16 mb-16 md:mt-0 md:mb-0 md:justify-start md:pl-40 md:-pt-0 md:-pb-0">
           <div className="relative flex origin-left items-center justify-start overflow-visible">
             <Image
-              src="/hero.svg"
+              src="/hero.webp"
               alt={t(
                 "hero.imageAlt",
                 "Thai food on wheels",
